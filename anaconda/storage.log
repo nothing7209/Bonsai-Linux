@@ -1,0 +1,757 @@
+DEBUG:anaconda.modules.common:The configuration is loaded from: ['/run/anaconda/anaconda.conf']
+INFO:program:Running... udevadm trigger --action=change --subsystem-match=block
+DEBUG:program:Return code: 0
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:anaconda.core.util:ID_LIKE not found in os-release files
+DEBUG:anaconda.core.kickstart.version:Using ID for version detection: fedora
+DEBUG:anaconda.core.kickstart.version:Attempting to convert version string: f43
+INFO:anaconda.core.kickstart.version:Detected kickstart version from platform ID: f43 -> 43000
+INFO:anaconda.core.kickstart.version:Using os-release detected kickstart version
+INFO:blivet:failed to get initiator name from iscsi firmware: Failed to call GetFirmwareInitiatorName method on /org/freedesktop/UDisks2/Manager with None arguments: GDBus.Error:org.freedesktop.UDisks2.Error.ISCSI.NoFirmware: No firmware found
+DEBUG:anaconda.modules.storage.bootloader.bootloader:The default type is set to 'BootloaderType.DEFAULT'.
+DEBUG:anaconda.modules.storage.fcoe.fcoe:Start up the FCoE module.
+INFO:program:[libmkod] custom logging function 0x7f354cdc9680 registered
+
+INFO:program:[libmkod] context 0x5651aa70df50 released
+
+ERROR:blivet:failed to load libfc: Failed to load the module 'libfc': File exists
+INFO:program:Running... /usr/libexec/fcoe/fcoe_edd.sh -i
+ERROR:program:Error running /usr/libexec/fcoe/fcoe_edd.sh: No such file or directory
+INFO:blivet:Failed to read FCoE EDD info: No such file or directory
+DEBUG:anaconda.modules.storage.iscsi.iscsi:Start up the iSCSI module.
+DEBUG:anaconda.modules.storage.nvme.nvme:Start up the NVMe module.
+DEBUG:anaconda.modules.storage.zfcp.zfcp:Start up the zFCP module.
+DEBUG:blivet:               Ext4FS.supported: supported: True ;
+DEBUG:blivet:get_format('ext4') returning Ext4FS instance with object id 0
+DEBUG:blivet:            Ext4FS.supported: supported: True ;
+DEBUG:blivet:trying to set new default fstype to 'ext4'
+DEBUG:blivet:                  Ext4FS.supported: supported: True ;
+DEBUG:blivet:get_format('ext4') returning Ext4FS instance with object id 1
+DEBUG:blivet:               Ext4FS.supported: supported: True ;
+INFO:blivet:Fstab file '' does not exist, setting fstab read path to None
+INFO:program:Running... lsblk --bytes -a -o NAME,SIZE,OWNER,GROUP,MODE,FSTYPE,LABEL,UUID,PARTUUID,MOUNTPOINT
+INFO:program:stdout:
+INFO:program:NAME                SIZE OWNER GROUP MODE       FSTYPE  LABEL              UUID                                 PARTUUID                             MOUNTPOINT
+INFO:program:loop0         8994684928 root  disk  brw-rw---- ext4    Anaconda           2cdf9a2f-96ca-4c0a-9571-51e1b9a2fdf8                                      /mnt/sysroot
+INFO:program:loop1         8994684928 root  disk  brw-rw---- ext4    Anaconda           4798cb33-4880-40b5-9874-d0cc514ce518                                      /mnt/sysimage
+INFO:program:loop2                  0 root  disk  brw-rw----                                                                                                      
+INFO:program:sda          61865984000 root  disk  brw-rw---- iso9660 Fedora-KDE-Live-43 2025-10-23-04-17-29-00                                                    
+INFO:program:|-sda1        3234320384 root  disk  brw-rw---- iso9660 Fedora-KDE-Live-43 2025-10-23-04-17-29-00               09d661a4-d7d4-4d99-8ec6-b91e3365d7f0 
+INFO:program:`-sda2          31457280 root  disk  brw-rw---- vfat    BOOT               BA0E-CF8F                            09d661a4-d7d4-4d99-8ec5-b91e3365d7f0 
+INFO:program:zram0         6009389056 root  disk  brw-rw---- swap    zram0              cd30a546-32ff-4902-9242-a01b71532ef9                                      [SWAP]
+INFO:program:nvme0n1     512110190592 root  disk  brw-rw----                                                                                                      
+INFO:program:|-nvme0n1p1    629145600 root  disk  brw-rw---- vfat                       EF0E-2825                            ab2d1faa-9ae3-478f-b046-76abaf958af9 /boot/efi
+INFO:program:|-nvme0n1p2   2147483648 root  disk  brw-rw---- ext4                       9da37a0f-9fea-42b4-a640-d64b8ea0c6b5 30755499-9969-4cdb-ad16-6dc0dd53b5df /boot
+INFO:program:`-nvme0n1p3 509332160512 root  disk  brw-rw---- btrfs   fedora             49bc71f0-007a-40f9-a9c2-94a5c2f09479 f380b4da-1760-4ee0-a3f1-09b32e1ff789 /home
+DEBUG:program:Return code: 0
+DEBUG:blivet:lsblk output:
+NAME                SIZE OWNER GROUP MODE       FSTYPE  LABEL              UUID                                 PARTUUID                             MOUNTPOINT
+loop0         8994684928 root  disk  brw-rw---- ext4    Anaconda           2cdf9a2f-96ca-4c0a-9571-51e1b9a2fdf8                                      /mnt/sysroot
+loop1         8994684928 root  disk  brw-rw---- ext4    Anaconda           4798cb33-4880-40b5-9874-d0cc514ce518                                      /mnt/sysimage
+loop2                  0 root  disk  brw-rw----                                                                                                      
+sda          61865984000 root  disk  brw-rw---- iso9660 Fedora-KDE-Live-43 2025-10-23-04-17-29-00                                                    
+|-sda1        3234320384 root  disk  brw-rw---- iso9660 Fedora-KDE-Live-43 2025-10-23-04-17-29-00               09d661a4-d7d4-4d99-8ec6-b91e3365d7f0 
+`-sda2          31457280 root  disk  brw-rw---- vfat    BOOT               BA0E-CF8F                            09d661a4-d7d4-4d99-8ec5-b91e3365d7f0 
+zram0         6009389056 root  disk  brw-rw---- swap    zram0              cd30a546-32ff-4902-9242-a01b71532ef9                                      [SWAP]
+nvme0n1     512110190592 root  disk  brw-rw----                                                                                                      
+|-nvme0n1p1    629145600 root  disk  brw-rw---- vfat                       EF0E-2825                            ab2d1faa-9ae3-478f-b046-76abaf958af9 /boot/efi
+|-nvme0n1p2   2147483648 root  disk  brw-rw---- ext4                       9da37a0f-9fea-42b4-a640-d64b8ea0c6b5 30755499-9969-4cdb-ad16-6dc0dd53b5df /boot
+`-nvme0n1p3 509332160512 root  disk  brw-rw---- btrfs   fedora             49bc71f0-007a-40f9-a9c2-94a5c2f09479 f380b4da-1760-4ee0-a3f1-09b32e1ff789 /home
+
+DEBUG:blivet:lvm filter: clearing the lvm devices list
+DEBUG:blivet:lvm filter: clearing the lvm devices list
+DEBUG:blivet:trying to set new default fstype to 'ext4'
+DEBUG:blivet:                Ext4FS.supported: supported: True ;
+DEBUG:blivet:get_format('ext4') returning Ext4FS instance with object id 2
+DEBUG:blivet:             Ext4FS.supported: supported: True ;
+DEBUG:anaconda.storage:trying to set new default luks version to 'luks2'
+DEBUG:blivet:              LUKS.__init__: luks_version: luks2 ;
+DEBUG:blivet:get_format('luks') returning LUKS instance with object id 3
+DEBUG:anaconda.modules.storage.storage:The storage model has changed.
+DEBUG:anaconda.modules.common.base.base:Publish the service.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Checker.
+INFO:anaconda.core.dbus:Connecting to the Anaconda bus at unix:path=/tmp/dbus-Ncncsnz1Ra,guid=e41871f9956cc21e3a62293e69e485a1.
+WARNING:py.warnings:/usr/lib/python3.14/site-packages/dasbus/server/handler.py:78: DeprecationWarning: Gio.DBusConnection.register_object is deprecated
+  registration_id = connection.register_object(
+
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/DeviceTree.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/DiskInitialization.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/DiskSelection.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Snapshot.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Bootloader.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/FCoE.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/iSCSI.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/NVMe.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/DASD.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/zFCP.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage.
+DEBUG:dasbus.connection:Registering a service name org.fedoraproject.Anaconda.Modules.Storage.
+DEBUG:anaconda.modules.common.base.base:Start the loop.
+WARNING:py.warnings:/usr/lib64/python3.14/site-packages/gi/events.py:718: DeprecationWarning: 'asyncio.AbstractEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  class GLibEventLoopPolicy(asyncio.AbstractEventLoopPolicy):
+
+WARNING:py.warnings:/usr/lib64/python3.14/site-packages/gi/_ossighelper.py:266: DeprecationWarning: 'asyncio.get_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  policy = asyncio.get_event_loop_policy()
+
+DEBUG:anaconda.modules.common.base.base:Reading kickstart...
+DEBUG:anaconda.modules.storage.disk_initialization.initialization:Can format unrecognized is set to 'True'.
+DEBUG:anaconda.modules.storage.disk_initialization.initialization:Default disk label is set to ''.
+DEBUG:anaconda.modules.storage.disk_initialization.initialization:Can initialize labels is set to 'False'.
+DEBUG:anaconda.modules.storage.disk_initialization.initialization:Can format LDL is set to 'False'.
+DEBUG:anaconda.modules.storage.disk_initialization.initialization:The initialization mode is set to 'InitializationMode.CLEAR_ALL'.
+DEBUG:anaconda.modules.storage.disk_initialization.initialization:Devices to clear are set to '[]'.
+DEBUG:anaconda.modules.storage.disk_initialization.initialization:Drives to clear are set to '[]'.
+DEBUG:anaconda.modules.storage.disk_selection.selection:Selected disks are set to '[]'.
+DEBUG:anaconda.modules.storage.disk_selection.selection:Exclusive disks are set to '[]'.
+DEBUG:anaconda.modules.storage.disk_selection.selection:Ignored disks are set to '[]'.
+DEBUG:anaconda.modules.storage.bootloader.bootloader:Bootloader mode is set to 'BootloaderMode.SKIPPED'.
+DEBUG:anaconda.modules.storage.storage:Created the partitioning CUSTOM.
+DEBUG:anaconda.modules.common.base.base:Kickstarted is set to True.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Partitioning/1.
+DEBUG:anaconda.modules.common.base.base:Locale is set to en_US.UTF-8.
+DEBUG:anaconda.modules.storage.checker.checker:Constraint 'min_ram' is set to '335544320'.
+DEBUG:anaconda.modules.storage.disk_selection.selection:Disk images are set to '{}'.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Task/1.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Task/2.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Task/3.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Task/4.
+INFO:anaconda.core.threads:Running Thread: AnaTaskThread-CreateStorageLayoutTask-1 (139866830059200)
+INFO:anaconda.modules.common.task.task:Create storage layout
+DEBUG:anaconda.modules.storage.installation:Don't create the storage layout during the installation to a directory.
+INFO:anaconda.core.threads:Thread Done: AnaTaskThread-CreateStorageLayoutTask-1 (139866830059200)
+INFO:anaconda.core.threads:Running Thread: AnaTaskThread-MountFilesystemsTask-1 (139866830059200)
+INFO:anaconda.modules.common.task.task:Mount filesystems
+DEBUG:blivet:                  BindFS.supported: supported: False ;
+DEBUG:blivet:get_format('bind') returning BindFS instance with object id 4
+DEBUG:blivet:get_format('None') returning DeviceFormat instance with object id 6
+DEBUG:blivet:                     DirectoryDevice._set_format: /dev ; type: bind ; current: None ;
+DEBUG:blivet:updated /dev size to 4.51 KiB (4.51 KiB)
+DEBUG:blivet:                      TmpFS.supported: supported: True ;
+DEBUG:blivet:get_format('tmpfs') returning TmpFS instance with object id 8
+DEBUG:blivet:get_format('None') returning DeviceFormat instance with object id 10
+DEBUG:blivet:                     NoDevice._set_format: tmpfs ; type: tmpfs ; current: None ;
+DEBUG:blivet:                    DevPtsFS.supported: supported: False ;
+DEBUG:blivet:get_format('devpts') returning DevPtsFS instance with object id 12
+DEBUG:blivet:get_format('None') returning DeviceFormat instance with object id 14
+DEBUG:blivet:                     NoDevice._set_format: devpts ; type: devpts ; current: None ;
+DEBUG:blivet:                    SysFS.supported: supported: False ;
+DEBUG:blivet:get_format('sysfs') returning SysFS instance with object id 16
+DEBUG:blivet:get_format('None') returning DeviceFormat instance with object id 18
+DEBUG:blivet:                     NoDevice._set_format: sysfs ; type: sysfs ; current: None ;
+DEBUG:blivet:                    ProcFS.supported: supported: False ;
+DEBUG:blivet:get_format('proc') returning ProcFS instance with object id 20
+DEBUG:blivet:get_format('None') returning DeviceFormat instance with object id 22
+DEBUG:blivet:                     NoDevice._set_format: proc ; type: proc ; current: None ;
+DEBUG:blivet:                    SELinuxFS.supported: supported: False ;
+DEBUG:blivet:get_format('selinuxfs') returning SELinuxFS instance with object id 24
+DEBUG:blivet:get_format('None') returning DeviceFormat instance with object id 26
+DEBUG:blivet:                     NoDevice._set_format: selinuxfs ; type: selinuxfs ; current: None ;
+DEBUG:blivet:                    USBFS.supported: supported: False ;
+DEBUG:blivet:get_format('usbfs') returning USBFS instance with object id 28
+DEBUG:blivet:get_format('None') returning DeviceFormat instance with object id 30
+DEBUG:blivet:                     NoDevice._set_format: usbfs ; type: usbfs ; current: None ;
+DEBUG:blivet:                  BindFS.supported: supported: False ;
+DEBUG:blivet:get_format('bind') returning BindFS instance with object id 32
+DEBUG:blivet:get_format('None') returning DeviceFormat instance with object id 34
+DEBUG:blivet:                     DirectoryDevice._set_format: /run ; type: bind ; current: None ;
+DEBUG:blivet:updated /run size to 1.46 KiB (1.46 KiB)
+DEBUG:blivet:                    EFIVarFS.supported: supported: False ;
+DEBUG:blivet:get_format('efivarfs') returning EFIVarFS instance with object id 36
+DEBUG:blivet:get_format('None') returning DeviceFormat instance with object id 38
+DEBUG:blivet:                     NoDevice._set_format: efivarfs ; type: efivarfs ; current: None ;
+DEBUG:blivet:                      TmpFS.supported: supported: True ;
+DEBUG:blivet:get_format('tmpfs') returning TmpFS instance with object id 40
+DEBUG:blivet:get_format('None') returning DeviceFormat instance with object id 42
+DEBUG:blivet:                     NoDevice._set_format: tmpfs ; type: tmpfs ; current: None ;
+DEBUG:blivet:            DirectoryDevice.setup: /dev ; orig: False ; status: True ; controllable: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+DEBUG:blivet:            BindFS.setup: device: /dev ; type: bind ; status: False ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+DEBUG:blivet:            NoDevice.setup: devpts ; orig: False ; status: False ; controllable: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+DEBUG:blivet:            DevPtsFS.setup: device: devpts ; type: devpts ; status: False ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+DEBUG:blivet:            NoDevice.setup: tmpfs ; orig: False ; status: False ; controllable: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+DEBUG:blivet:            TmpFS.setup: device: tmpfs ; type: tmpfs ; status: True ;
+DEBUG:blivet:            NoDevice.setup: proc ; orig: False ; status: True ; controllable: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+DEBUG:blivet:            ProcFS.setup: device: proc ; type: proc ; status: False ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:[libmkod] custom logging function 0x7f354cdc9680 registered
+
+INFO:program:[libmkod] context 0x7f35401a0440 released
+
+DEBUG:blivet:            DirectoryDevice.setup: /run ; orig: False ; status: True ; controllable: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+DEBUG:blivet:            BindFS.setup: device: /run ; type: bind ; status: False ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+DEBUG:blivet:            NoDevice.setup: sysfs ; orig: False ; status: False ; controllable: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+DEBUG:blivet:            SysFS.setup: device: sysfs ; type: sysfs ; status: False ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+DEBUG:blivet:            NoDevice.setup: efivarfs ; orig: False ; status: False ; controllable: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+DEBUG:blivet:            EFIVarFS.setup: device: efivarfs ; type: efivarfs ; status: False ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+DEBUG:blivet:            NoDevice.setup: selinuxfs ; orig: False ; status: False ; controllable: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+DEBUG:blivet:            SELinuxFS.setup: device: selinuxfs ; type: selinuxfs ; status: False ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+DEBUG:blivet:            NoDevice.setup: tmpfs ; orig: False ; status: False ; controllable: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:testdata:sysfs attr /sys/class/block/nvme0n1/device/model: 4d6963726f6e204d5446444b434435313251464d2d314244314141424c41202020202020202020200a
+DEBUG:testdata:sysfs attr /sys/class/block/sda/device/model: 53544f5245204e20474f2020202020200a
+DEBUG:blivet:            TmpFS.setup: device: tmpfs ; type: tmpfs ; status: True ;
+INFO:program:Running... findmnt -rn /mnt/sysroot
+INFO:program:/mnt/sysroot /dev/loop0 ext4 rw,relatime,seclabel
+DEBUG:program:Return code of findmnt: 0
+INFO:program:Running... mount --make-rprivate /mnt/sysroot
+DEBUG:program:Return code of mount: 0
+INFO:program:Running... umount --recursive /mnt/sysroot
+DEBUG:program:Return code of umount: 0
+INFO:program:Running... mount --rbind /mnt/sysimage /mnt/sysroot
+DEBUG:program:Return code of mount: 0
+INFO:anaconda.core.threads:Thread Done: AnaTaskThread-MountFilesystemsTask-1 (139866830059200)
+INFO:anaconda.core.threads:Running Thread: AnaTaskThread-WriteConfigurationTask-1 (139866616624832)
+INFO:anaconda.modules.common.task.task:Write the storage configuration
+DEBUG:anaconda.modules.storage.installation:Don't write the storage configuration during the installation to a directory.
+INFO:anaconda.core.threads:Thread Done: AnaTaskThread-WriteConfigurationTask-1 (139866616624832)
+DEBUG:anaconda.modules.storage.bootloader.bootloader:The bootloader configuration is disabled for dir installations.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Task/5.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Task/6.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Task/7.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Task/8.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Task/9.
+INFO:anaconda.core.threads:Running Thread: AnaTaskThread-CreateRescueImagesTask-1 (139866616624832)
+INFO:anaconda.modules.common.task.task:Create rescue images
+DEBUG:anaconda.modules.storage.bootloader.installation:Only live payloads require this fix.
+INFO:anaconda.core.threads:Thread Done: AnaTaskThread-CreateRescueImagesTask-1 (139866616624832)
+INFO:anaconda.core.threads:Running Thread: AnaTaskThread-ConfigureBootloaderTask-1 (139866616624832)
+INFO:anaconda.modules.common.task.task:Configure the bootloader
+DEBUG:anaconda.modules.storage.bootloader.installation:The bootloader configuration is disabled for dir installations.
+INFO:anaconda.core.threads:Thread Done: AnaTaskThread-ConfigureBootloaderTask-1 (139866616624832)
+INFO:anaconda.core.threads:Running Thread: AnaTaskThread-CollectKernelArgumentsTask-1 (139866616624832)
+INFO:anaconda.modules.common.task.task:Collect kernel arguments
+DEBUG:anaconda.modules.storage.bootloader.installation:The bootloader installation is disabled for dir installations.
+INFO:anaconda.core.threads:Thread Done: AnaTaskThread-CollectKernelArgumentsTask-1 (139866616624832)
+INFO:anaconda.core.threads:Running Thread: AnaTaskThread-InstallBootloaderTask-1 (139866616624832)
+INFO:anaconda.modules.common.task.task:Install the bootloader
+DEBUG:anaconda.modules.storage.bootloader.installation:The bootloader installation is disabled for dir installations.
+INFO:anaconda.core.threads:Thread Done: AnaTaskThread-InstallBootloaderTask-1 (139866616624832)
+INFO:anaconda.core.threads:Running Thread: AnaTaskThread-CreateBLSEntriesTask-1 (139866616624832)
+INFO:anaconda.modules.common.task.task:Create the BLS entries
+DEBUG:anaconda.modules.storage.bootloader.installation:Only live payloads require this fix.
+INFO:anaconda.core.threads:Thread Done: AnaTaskThread-CreateBLSEntriesTask-1 (139866616624832)
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Task/10.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Task/11.
+INFO:anaconda.core.threads:Running Thread: AnaTaskThread-RecreateInitrdsTask-1 (139866616624832)
+INFO:anaconda.modules.common.task.task:Recreate the initrds
+INFO:anaconda.modules.storage.bootloader.factory:Created the boot loader EFIGRUB.
+DEBUG:anaconda.modules.storage.bootloader.utils:new-kernel-pkg does not exist, using dracut instead
+INFO:anaconda.modules.storage.bootloader.utils:Recreating initrd for 6.17.1-300.fc43.x86_64
+INFO:program:Running in chroot '/mnt/sysroot'... depmod -a 6.17.1-300.fc43.x86_64
+DEBUG:program:Return code of depmod: 0
+INFO:program:Running in chroot '/mnt/sysroot'... dracut -f /boot/initramfs-6.17.1-300.fc43.x86_64.img 6.17.1-300.fc43.x86_64
+INFO:program:dracut[W]: Running in hostonly mode in a container!
+DEBUG:program:Return code of dracut: 0
+INFO:anaconda.core.threads:Thread Done: AnaTaskThread-RecreateInitrdsTask-1 (139866616624832)
+INFO:anaconda.core.threads:Running Thread: AnaTaskThread-FixBTRFSBootloaderTask-1 (139866616624832)
+INFO:anaconda.modules.common.task.task:Fix the bootloader on BTRFS
+DEBUG:anaconda.modules.storage.bootloader.installation:Only live payloads require this fix.
+INFO:anaconda.core.threads:Thread Done: AnaTaskThread-FixBTRFSBootloaderTask-1 (139866616624832)
+INFO:anaconda.core.threads:Running Thread: AnaTaskThread-FixZIPLBootloaderTask-1 (139866616624832)
+INFO:anaconda.modules.common.task.task:Rerun zipl
+DEBUG:anaconda.modules.storage.bootloader.installation:ZIPL can be run only on s390x.
+INFO:anaconda.core.threads:Thread Done: AnaTaskThread-FixZIPLBootloaderTask-1 (139866616624832)
+DEBUG:anaconda.modules.common.base.base:Generating kickstart...
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Task/12.
+DEBUG:dasbus.connection:Publishing an object at /org/fedoraproject/Anaconda/Modules/Storage/Task/13.
+INFO:anaconda.core.threads:Running Thread: AnaTaskThread-UnmountFilesystemsTask-1 (139866616624832)
+INFO:anaconda.modules.common.task.task:Unmount filesystems
+DEBUG:blivet:            TmpFS.teardown: device: tmpfs ; type: tmpfs ; status: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+INFO:program:Running... umount /mnt/sysimage/tmp
+DEBUG:program:Return code: 0
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:blivet:            SELinuxFS.teardown: device: selinuxfs ; type: selinuxfs ; status: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+INFO:program:Running... umount /mnt/sysimage/sys/fs/selinux
+DEBUG:program:Return code: 0
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:blivet:            EFIVarFS.teardown: device: efivarfs ; type: efivarfs ; status: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+INFO:program:Running... umount /mnt/sysimage/sys/firmware/efi/efivars
+DEBUG:program:Return code: 0
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:blivet:            SysFS.teardown: device: sysfs ; type: sysfs ; status: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+INFO:program:Running... umount /mnt/sysimage/sys
+DEBUG:program:Return code: 0
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:blivet:            BindFS.teardown: device: /run ; type: bind ; status: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+INFO:program:Running... umount /mnt/sysimage/run
+DEBUG:program:Return code: 0
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+INFO:program:[libmkod] custom logging function 0x7f354cdc9680 registered
+
+INFO:program:[libmkod] context 0x7f354001ff50 released
+
+DEBUG:blivet:            ProcFS.teardown: device: proc ; type: proc ; status: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+INFO:program:Running... umount /mnt/sysimage/proc
+DEBUG:program:Return code: 0
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:blivet:            TmpFS.teardown: device: tmpfs ; type: tmpfs ; status: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+INFO:program:Running... umount /mnt/sysimage/dev/shm
+DEBUG:program:Return code: 0
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:blivet:            DevPtsFS.teardown: device: devpts ; type: devpts ; status: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+INFO:program:Running... umount /mnt/sysimage/dev/pts
+DEBUG:program:Return code: 0
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+DEBUG:blivet:            BindFS.teardown: device: /dev ; type: bind ; status: True ;
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+INFO:program:Running... umount /mnt/sysimage/dev
+DEBUG:program:Return code: 0
+INFO:program:Running... udevadm settle --timeout=300
+DEBUG:program:Return code: 0
+INFO:program:Running... findmnt -rn /mnt/sysroot
+INFO:program:/mnt/sysroot /dev/loop1 ext4 rw,relatime,seclabel
+DEBUG:program:Return code of findmnt: 0
+INFO:program:Running... mount --make-rprivate /mnt/sysroot
+DEBUG:program:Return code of mount: 0
+INFO:program:Running... umount --recursive /mnt/sysroot
+DEBUG:program:Return code of umount: 0
+INFO:anaconda.core.threads:Thread Done: AnaTaskThread-UnmountFilesystemsTask-1 (139866616624832)
+INFO:anaconda.core.threads:Running Thread: AnaTaskThread-TeardownDiskImagesTask-1 (139866608232128)
+INFO:anaconda.modules.common.task.task:Tear down disk images
+INFO:anaconda.core.threads:Thread Done: AnaTaskThread-TeardownDiskImagesTask-1 (139866608232128)
+DEBUG:dasbus.connection:Disconnecting from the bus.

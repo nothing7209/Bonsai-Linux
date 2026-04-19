@@ -1,0 +1,2300 @@
+The unit files have no installation config (WantedBy=, RequiredBy=, UpheldBy=,
+Also=, or Alias= settings in the [Install] section, and DefaultInstance= for
+template units). This means they are not meant to be enabled or disabled using systemctl.
+ 
+Possible reasons for having these kinds of units are:
+* A unit may be statically enabled by being symlinked from another unit's
+  .wants/, .requires/, or .upholds/ directory.
+* A unit's purpose may be to act as a helper for some other unit which has
+  a requirement dependency on it.
+* A unit may be started when needed via activation (socket, path, timer,
+  D-Bus, udev, scripted systemctl call, ...).
+* In case of template units, the unit is meant to be enabled with some
+  instance name specified.
+Packages within this LiveCD
+299739548	libreoffice-core-25.8.1.1-0.2.fc43.x86_64
+266210085	qt6-qtwebengine-6.9.2-2.fc43.x86_64
+262095751	firefox-143.0.3-1.fc43.x86_64
+247780043	java-25-openjdk-headless-25.0.0.0.36-0.1.ea.fc43.x86_64
+237950035	glibc-all-langpacks-2.42-4.fc43.x86_64
+156178000	ibus-1.5.33~rc2-2.fc43.x86_64
+151059366	mesa-vulkan-drivers-25.2.4-2.fc43.x86_64
+145312823	llvm-libs-21.1.2-1.fc43.x86_64
+128335323	cldr-emoji-annotation-48~beta1-1.fc43.noarch
+105915219	nvidia-gpu-firmware-20251021-1.fc43.noarch
+102689466	kernel-core-6.17.1-300.fc43.x86_64
+100250612	kernel-modules-6.17.1-300.fc43.x86_64
+91142219	webkit2gtk4.1-2.50.0-2.fc43.x86_64
+91129205	webkitgtk6.0-2.50.0-2.fc43.x86_64
+71605423	kernel-modules-core-6.17.1-300.fc43.x86_64
+65696110	iwlwifi-mvm-firmware-20251021-1.fc43.noarch
+62712603	geolite2-city-20191217-15.fc43.noarch
+62684759	qemu-system-x86-core-10.1.0-7.fc43.x86_64
+61493647	gnome-user-docs-49.1-1.fc43.noarch
+57504125	google-noto-serif-cjk-vf-fonts-2.003-3.fc43.noarch
+51397482	qt6-qtdeclarative-6.9.2-1.fc43.x86_64
+50231733	mesa-dri-drivers-25.2.4-2.fc43.x86_64
+49916645	podman-5.6.2-1.fc43.x86_64
+47175933	edk2-ovmf-20250812-18.fc43.noarch
+45048144	python3-libs-3.14.0-1.fc43.x86_64
+43831909	linux-firmware-20251021-1.fc43.noarch
+43207802	firefox-langpacks-143.0.3-1.fc43.x86_64
+42861180	atheros-firmware-20251021-1.fc43.noarch
+41502785	unicode-ucd-17.0.0-1.fc43.noarch
+38556598	libpinyin-data-2.10.2-2.fc43.x86_64
+38152709	libicu-77.1-1.fc43.x86_64
+33444472	javascriptcoregtk6.0-2.50.0-2.fc43.x86_64
+33444336	javascriptcoregtk4.1-2.50.0-2.fc43.x86_64
+32698084	google-noto-sans-cjk-vf-fonts-2.004-10.fc43.noarch
+32073408	qemu-user-static-mips-10.1.0-7.fc43.x86_64
+31923209	google-noto-sans-mono-cjk-vf-fonts-2.004-10.fc43.noarch
+30815169	hplip-3.25.6-1.fc43.x86_64
+30472973	gutenprint-5.3.5-6.fc43.x86_64
+30328359	libreoffice-help-en-25.8.1.1-0.2.fc43.x86_64
+29783451	libvirt-libs-11.6.0-1.fc43.x86_64
+29734184	speech-dispatcher-0.12.1-5.fc43.x86_64
+28151044	libreoffice-calc-25.8.1.1-0.2.fc43.x86_64
+27960323	gtk4-4.20.2-1.fc43.x86_64
+27792461	binutils-2.45-1.fc43.x86_64
+26925022	amd-gpu-firmware-20251021-1.fc43.noarch
+26775748	anthy-unicode-1.0.0.20240502-11.fc43.x86_64
+26152821	skopeo-1.20.0-2.fc43.x86_64
+25054723	qemu-img-10.1.0-7.fc43.x86_64
+24894939	gnome-backgrounds-49.0-1.fc43.noarch
+24883556	qt6-qtbase-gui-6.9.2-1.fc43.x86_64
+24764827	git-core-2.51.0-2.fc43.x86_64
+24661444	libgs-10.05.1-5.fc43.x86_64
+24371232	qt6-qtpdf-6.9.2-2.fc43.x86_64
+24364793	gnome-control-center-49.1-1.fc43.x86_64
+23921684	libgweather-4.4.4-3.fc43.x86_64
+23520971	intel-mediasdk-23.2.2-8.fc43.x86_64
+23461457	gtk3-3.24.51-2.fc43.x86_64
+22530844	flite-2.2-12.fc43.x86_64
+22496651	iso-codes-4.18.0-2.fc43.noarch
+21736328	mythes-en-3.0-42.fc43.noarch
+21730301	mozjs140-140.2.0-1.fc43.x86_64
+21430799	orca-49.4-1.fc43.noarch
+21184230	qt5-qtbase-gui-5.15.17-5.fc43.x86_64
+20612655	samba-client-libs-4.23.1-1.fc43.x86_64
+19554111	selinux-policy-targeted-42.12-1.fc43.noarch
+19347452	mt7xxx-firmware-20251021-1.fc43.noarch
+18550533	git-core-doc-2.51.0-2.fc43.noarch
+18280753	librados2-19.2.3-8.fc43.x86_64
+16502166	gdb-headless-16.3-6.fc43.x86_64
+16255782	librbd1-19.2.3-8.fc43.x86_64
+15891209	adobe-mappings-cmap-20231115-3.fc43.noarch
+15803622	appstream-data-43-3.fc43.noarch
+15781531	qemu-user-static-aarch64-10.1.0-7.fc43.x86_64
+15680637	qemu-user-static-ppc-10.1.0-7.fc43.x86_64
+15540412	lpcnetfreedv-0.5-9.fc43.x86_64
+15472567	qt6-qttranslations-6.9.2-1.fc43.noarch
+15458293	qt5-qttranslations-5.15.17-2.fc43.noarch
+15420919	glib2-2.86.0-2.fc43.x86_64
+15379103	papers-49.1-2.fc43.x86_64
+15167243	qt5-qtdeclarative-5.15.17-2.fc43.x86_64
+15114522	qemu-user-static-xtensa-10.1.0-7.fc43.x86_64
+15095929	microcode_ctl-2.1-71.fc43.x86_64
+14710999	capstone-5.0.5-7.fc43.x86_64
+14613117	gnome-shell-49.1-1.fc43.x86_64
+14494549	nautilus-49.1-1.fc43.x86_64
+14035324	anaconda-core-43.44-3.fc43.x86_64
+13731150	glycin-loaders-2.0.3-1.fc43.x86_64
+13536407	gettext-0.25.1-2.fc43.x86_64
+13520330	qt6-qtbase-6.9.2-1.fc43.x86_64
+13514576	mutter-49.1-1.fc43.x86_64
+13416812	systemd-258-1.fc43.x86_64
+13368085	qemu-user-static-sparc-10.1.0-7.fc43.x86_64
+12958660	systemd-udev-258-1.fc43.x86_64
+12947088	poppler-data-0.4.11-10.fc43.noarch
+12932958	libreoffice-writer-25.8.1.1-0.2.fc43.x86_64
+12835683	exiv2-0.28.6-2.fc43.x86_64
+12730797	espeak-ng-1.51.1-11.fc43.x86_64
+12695409	liblouis-tables-3.33.0-6.fc43.noarch
+12554330	toolbox-0.3-1.fc43.x86_64
+12431147	file-libs-5.46-8.fc43.x86_64
+12259752	intel-vpl-gpu-rt-25.3.4-1.fc43.x86_64
+12257552	sane-backends-drivers-scanners-1.4.0-4.fc43.x86_64
+12090795	perl-libs-5.42.0-520.fc43.x86_64
+12005411	python3-rapidfuzz-3.12.2-5.fc43.x86_64
+11972673	adwaita-cursor-theme-49.0-1.fc43.noarch
+11936505	netavark-1.16.1-1.fc43.x86_64
+11802621	coreutils-common-9.7-6.fc43.x86_64
+11702545	gnome-software-49.0-2.fc43.x86_64
+11331690	qemu-user-static-riscv-10.1.0-7.fc43.x86_64
+11265024	qemu-user-static-arm-10.1.0-7.fc43.x86_64
+10689898	xkeyboard-config-2.45-1.fc43.noarch
+10506915	NetworkManager-libnm-1.54.0-2.fc43.x86_64
+10478129	qt5-qtbase-5.15.17-5.fc43.x86_64
+10350301	gstreamer1-plugins-bad-free-1.26.6-2.fc43.x86_64
+10294880	libavcodec-free-7.1.2-2.fc43.x86_64
+10245425	alsa-sof-firmware-2025.05.1-1.fc43.noarch
+10084203	libva-intel-media-driver-25.3.4-1.fc43.x86_64
+10059465	hwdata-0.399-1.fc43.noarch
+10057681	python3-perf-6.17.1-300.fc43.x86_64
+9993474	brcmfmac-firmware-20251021-1.fc43.noarch
+9926102	qemu-user-static-x86-10.1.0-7.fc43.x86_64
+9725179	cracklib-dicts-2.9.11-8.fc43.x86_64
+9670342	python3-libdnf5-5.2.17.0-2.fc43.x86_64
+9510165	fwupd-2.0.16-1.fc43.x86_64
+9462914	python3-setuptools-78.1.1-15.fc43.noarch
+9329557	openssl-libs-3.5.1-2.fc43.x86_64
+9186331	intel-gpu-firmware-20251021-1.fc43.noarch
+9157615	ImageMagick-libs-7.1.1.47-3.fc43.x86_64
+9122222	zenity-4.2.0-1.fc43.x86_64
+9045195	evolution-data-server-3.58.0-1.fc43.x86_64
+9035559	evolution-data-server-langpacks-3.58.0-1.fc43.noarch
+9013790	pipewire-libs-1.4.8-2.fc43.x86_64
+8820142	bash-5.3.0-2.fc43.x86_64
+8548216	qemu-user-static-sh4-10.1.0-7.fc43.x86_64
+8535058	qemu-user-static-microblaze-10.1.0-7.fc43.x86_64
+8534397	cups-2.4.14-2.fc43.x86_64
+8394940	ibus-typing-booster-2.28.0-1.fc43.noarch
+8360925	ibus-anthy-1.5.17-7.fc43.x86_64
+8319643	brltty-6.8-4.fc43.x86_64
+8116201	loupe-49.0-1.fc43.x86_64
+8094617	gnome-calculator-49.1-1.fc43.x86_64
+8086788	grub2-tools-2.12-40.fc43.x86_64
+8085748	intel-vsc-firmware-20251021-1.fc43.noarch
+7771665	f43-backgrounds-base-43.0.3-1.fc43.noarch
+7726344	gstreamer1-plugins-good-1.26.6-1.fc43.x86_64
+7678829	gstreamer1-plugins-base-1.26.6-1.fc43.x86_64
+7568182	glibc-gconv-extra-2.42-4.fc43.x86_64
+7450233	iwlwifi-mld-firmware-20251021-1.fc43.noarch
+7229719	nvme-cli-2.15-2.fc43.x86_64
+7221167	libmwaw-0.3.22-7.fc43.x86_64
+7190807	libchewing-0.10.3-2.fc43.x86_64
+7014533	glibc-2.42-4.fc43.x86_64
+6984683	gnome-disk-utility-46.1-3.fc43.x86_64
+6911311	ipp-usb-0.9.30-5.fc43.x86_64
+6859818	openexr-libs-3.2.4-6.fc43.x86_64
+6855361	gnupg2-2.4.8-4.fc43.x86_64
+6840285	flatpak-1.16.1-1.fc43.x86_64
+6792172	libphonenumber-8.13.55-6.fc43.x86_64
+6774540	libreoffice-ure-25.8.1.1-0.2.fc43.x86_64
+6724190	libhangul-0.2.0-2.fc43.x86_64
+6623878	wpa_supplicant-2.11-7.fc43.x86_64
+6610788	btrfs-progs-6.17-1.fc43.x86_64
+6554991	google-droid-sans-fonts-20200215-23.fc43.noarch
+6526844	system-config-printer-libs-1.5.18-16.fc43.noarch
+6446724	grub2-common-2.12-40.fc43.noarch
+6441994	grub2-efi-x64-2.12-40.fc43.x86_64
+6440252	grub2-efi-x64-cdboot-2.12-40.fc43.x86_64
+6350235	gnome-settings-daemon-49.1-1.fc43.x86_64
+6240909	gnome-boxes-49.0-1.fc43.x86_64
+6199845	qemu-user-static-hexagon-10.1.0-7.fc43.x86_64
+6125943	NetworkManager-1.54.0-2.fc43.x86_64
+6114485	python3-policycoreutils-3.9-5.fc43.noarch
+6076000	python3-lxml-6.0.1-2.fc43.x86_64
+6026687	libgphoto2-2.5.31-4.fc43.x86_64
+6022083	gnome-maps-49.2-1.fc43.x86_64
+6001122	gsettings-desktop-schemas-49.0-1.fc43.x86_64
+5978471	anaconda-webui-53.1^20251022g00cddf56-1.fc43.noarch
+5868968	simple-scan-48.1-3.fc43.x86_64
+5837193	svt-av1-libs-3.1.2-1.fc43.x86_64
+5835600	spirv-tools-libs-2025.3-4.fc43.x86_64
+5827527	julietaula-montserrat-fonts-9.000-3.fc43.noarch
+5784362	adwaita-mono-fonts-49.0-2.fc43.noarch
+5725230	thrift-0.20.0-8.fc43.x86_64
+5698157	gtkmm4.0-4.19.1-1.fc43.x86_64
+5673265	coreutils-9.7-6.fc43.x86_64
+5644187	libqmi-1.36.0-2.fc43.x86_64
+5620033	gstreamer1-1.26.6-1.fc43.x86_64
+5492850	shared-mime-info-2.4-2.fc43.x86_64
+5478916	realtek-firmware-20251021-1.fc43.noarch
+5422091	grub2-efi-ia32-2.12-40.fc43.x86_64
+5420348	grub2-efi-ia32-cdboot-2.12-40.fc43.x86_64
+5415065	sssd-common-2.11.1-3.fc43.x86_64
+5404330	snapshot-49.0-1.fc43.x86_64
+5338000	gtkmm3.0-3.24.10-2.fc43.x86_64
+5315682	gnome-system-monitor-49.1-1.fc43.x86_64
+5291709	qt6-qtwayland-6.9.2-1.fc43.x86_64
+5289485	sudo-1.9.17-5.p1.fc43.x86_64
+5276138	grub2-tools-extra-2.12-40.fc43.x86_64
+5274343	libaom-3.13.1-1.fc43.x86_64
+5259570	gdm-49.1-1.fc43.x86_64
+5257885	fedora-workstation-backgrounds-1.6-8.fc43.noarch
+5238523	librsvg2-2.61.0-2.fc43.x86_64
+5179213	systemd-shared-258-1.fc43.x86_64
+5003457	nm-connection-editor-1.36.0-6.fc43.x86_64
+4959355	words-3.0-62.fc43.noarch
+4917185	qemu-user-static-loongarch64-10.1.0-7.fc43.x86_64
+4906844	perl-Encode-3.21-520.fc43.x86_64
+4859263	gtksourceview5-5.18.0-1.fc43.x86_64
+4845287	e2fsprogs-1.47.3-2.fc43.x86_64
+4835604	python3-blivet-3.12.1-9.fc43.noarch
+4828625	ModemManager-1.24.2-1.fc43.x86_64
+4828377	google-noto-color-emoji-fonts-20250623-2.fc43.noarch
+4802072	tiwilink-firmware-20251021-1.fc43.noarch
+4777853	qt5-qtwayland-5.15.17-2.fc43.x86_64
+4741242	rygel-45.0-1.fc43.x86_64
+4723143	qemu-user-static-s390x-10.1.0-7.fc43.x86_64
+4701887	httpd-core-2.4.64-3.fc43.x86_64
+4686101	gtksourceview4-4.8.4-10.fc43.x86_64
+4634466	glycin-libs-2.0.3-1.fc43.x86_64
+4600301	adobe-mappings-pdf-20190401-10.fc43.noarch
+4580334	cups-ipptool-2.4.14-2.fc43.x86_64
+4563394	highway-1.2.0-5.fc42.x86_64
+4530513	libreoffice-xsltfilter-25.8.1.1-0.2.fc43.x86_64
+4529523	appstream-1.1.0-1.fc43.x86_64
+4509734	tcl-9.0.2-1.fc43.x86_64
+4507660	qemu-user-static-m68k-10.1.0-7.fc43.x86_64
+4453336	python3-pillow-11.3.0-6.fc43.x86_64
+4414808	kernel-modules-extra-6.17.1-300.fc43.x86_64
+4349453	qemu-user-static-hppa-10.1.0-7.fc43.x86_64
+4304769	gvfs-client-1.58.0-1.fc43.x86_64
+4301595	xfsprogs-6.15.0-3.fc43.x86_64
+4294327	qemu-user-static-alpha-10.1.0-7.fc43.x86_64
+4222276	qemu-user-static-or1k-10.1.0-7.fc43.x86_64
+4157539	sos-4.10.0-3.fc43.noarch
+4144248	libavfilter-free-7.1.2-2.fc43.x86_64
+4113088	tesseract-langpack-eng-4.1.0-11.fc43.noarch
+4098670	osinfo-db-20250124-2.fc43.noarch
+4097602	shadow-utils-4.18.0-3.fc43.x86_64
+4033110	geolite2-country-20191217-15.fc43.noarch
+4028014	openconnect-9.12-9.fc43.x86_64
+4020737	gnutls-3.8.10-3.fc43.x86_64
+4010959	libdnf5-5.2.17.0-2.fc43.x86_64
+3997533	groff-base-1.23.0-10.fc43.x86_64
+3993921	poppler-25.07.0-2.fc43.x86_64
+3975625	paktype-naskh-basic-fonts-7.0-3.20231228.fc43.noarch
+3966348	gdouros-symbola-fonts-10.24-18.fc43.noarch
+3908982	lvm2-2.03.34-2.fc43.x86_64
+3887940	python3-libdnf-0.74.0-10.fc43.x86_64
+3784316	shim-x64-15.8-3.x86_64
+3770843	fftw-libs-single-3.3.10-16.fc43.x86_64
+3765087	bind-libs-9.18.39-4.fc43.x86_64
+3754583	libshaderc-2025.3-2.fc43.x86_64
+3675632	util-linux-2.41.1-17.fc43.x86_64
+3670748	localsearch-3.10.1-1.fc43.x86_64
+3630693	bluez-5.84-2.fc43.x86_64
+3628019	freerdp-libs-3.16.0-4.fc43.x86_64
+3570373	fftw-libs-double-3.3.10-16.fc43.x86_64
+3536434	gnome-keyring-48.0-3.fc43.x86_64
+3531221	pulseaudio-libs-17.0-7.fc43.x86_64
+3522197	virtualbox-guest-additions-7.1.8-2.fc43.x86_64
+3480773	libreoffice-data-25.8.1.1-0.2.fc43.x86_64
+3465071	zxcvbn-c-2.6-1.fc43.x86_64
+3456085	intel-audio-firmware-20251021-1.fc43.noarch
+3427059	protobuf-3.19.6-18.fc43.x86_64
+3421803	python3-kickstart-3.66-5.fc43.noarch
+3412068	libvpx-1.15.0-4.fc43.x86_64
+3409712	tesseract-libs-5.5.1-3.fc43.x86_64
+3402780	glusterfs-client-xlators-11.2-4.fc43.x86_64
+3383607	stix-fonts-2.13b171-9.fc43.noarch
+3367876	glibmm2.68-2.84.0-2.fc43.x86_64
+3317347	grub2-pc-modules-2.12-40.fc43.noarch
+3315490	libadwaita-1.8.1-1.fc43.x86_64
+3298537	sane-backends-1.4.0-4.fc43.x86_64
+3281172	glycin-thumbnailer-2.0.3-1.fc43.x86_64
+3279707	device-mapper-persistent-data-1.1.0-4.fc43.x86_64
+3278670	rpm-6.0.0-1.fc43.x86_64
+3276437	gstreamer1-plugins-bad-free-libs-1.26.6-2.fc43.x86_64
+3253432	net-snmp-libs-5.9.4-17.fc43.x86_64
+3246521	gnome-color-manager-3.36.2-2.fc43.x86_64
+3240809	source-highlight-3.1.9-25.fc43.x86_64
+3198485	libjxl-0.11.1-6.fc43.x86_64
+3138284	leptonica-1.85.0-4.fc43.x86_64
+3135440	rav1e-libs-0.7.1-8.fc43.x86_64
+3127692	cockpit-system-348-1.fc43.noarch
+3112929	NetworkManager-openconnect-1.2.10-9.fc43.x86_64
+3111300	grub2-tools-minimal-2.12-40.fc43.x86_64
+3106343	open-vm-tools-13.0.0-1.fc43.x86_64
+3102579	gnome-desktop3-44.4-1.fc43.x86_64
+3093037	tar-1.35-6.fc43.x86_64
+3074746	qpdf-libs-12.2.0-2.fc43.x86_64
+3058295	PackageKit-1.3.1-6.fc43.x86_64
+3050038	elfutils-0.193-3.fc43.x86_64
+3042151	qt5-qtxmlpatterns-5.15.17-2.fc43.x86_64
+3033999	udisks2-2.10.91-1.fc43.x86_64
+3022368	man-pages-6.9.1-5.fc43.noarch
+3018964	python3-firewall-2.3.1-5.fc43.noarch
+3015011	python3-setools-4.6.0-2.fc43.x86_64
+3003338	libvirt-daemon-driver-qemu-11.6.0-1.fc43.x86_64
+2999944	man-db-2.13.1-2.fc43.x86_64
+2995208	glibmm2.4-2.66.8-2.fc43.x86_64
+2982530	exiv2-libs-0.28.6-2.fc43.x86_64
+2976947	libstdc++-15.2.1-2.fc43.x86_64
+2961871	harfbuzz-11.5.1-1.fc43.x86_64
+2940865	kf6-kimageformats-6.18.0-1.fc43.x86_64
+2929014	dnf5-5.2.17.0-2.fc43.x86_64
+2924410	nano-8.5-2.fc43.x86_64
+2921020	gnome-characters-49.1-1.fc43.x86_64
+2870749	ipxe-roms-qemu-20240119-4.gitde8a0821.fc43.noarch
+2854117	ibus-libpinyin-1.16.5-2.fc43.x86_64
+2849849	colord-1.4.8-2.fc43.x86_64
+2831712	python3-dnf-4.23.0-6.fc43.noarch
+2810366	SDL3-3.2.20-1.fc43.x86_64
+2809829	abrt-2.17.7-1.fc43.x86_64
+2801369	ca-certificates-2025.2.80_v9.0.304-1.1.fc43.noarch
+2795032	libexif-0.6.25-2.fc43.x86_64
+2772547	google-carlito-fonts-1.103-0.27.20130920.fc43.noarch
+2767479	cryptsetup-libs-2.8.1-1.fc43.x86_64
+2730721	clevis-pin-tpm2-0.5.3-10.fc43.x86_64
+2729035	openssh-clients-10.0p1-5.fc43.x86_64
+2701226	qemu-common-10.1.0-7.fc43.x86_64
+2695768	libavformat-free-7.1.2-2.fc43.x86_64
+2695495	flashrom-1.4.0-3.fc43.x86_64
+2686958	libreport-2.17.15-9.fc43.x86_64
+2675867	folks-0.15.9-6.fc43.x86_64
+2659295	tinysparql-3.10.1-1.fc43.x86_64
+2645456	grub2-tools-efi-2.12-40.fc43.x86_64
+2641576	gnome-calendar-49.0.1-1.fc43.x86_64
+2635625	lvm2-libs-2.03.34-2.fc43.x86_64
+2630340	virtiofsd-1.13.2-2.fc43.x86_64
+2622240	gdk-pixbuf2-2.44.3-1.fc43.x86_64
+2619829	kbd-misc-2.8.0-3.fc43.noarch
+2611808	samba-client-4.23.1-1.fc43.x86_64
+2609172	fwupd-plugin-uefi-capsule-data-2.0.16-1.fc43.x86_64
+2603839	abseil-cpp-20250814.1-1.fc43.x86_64
+2597391	rpm-sequoia-1.9.0-2.fc43.x86_64
+2592886	parted-3.6-13.fc43.x86_64
+2590641	ffmpeg-free-7.1.2-2.fc43.x86_64
+2585501	mediawriter-5.2.8-2.fc43.x86_64
+2577074	glusterfs-11.2-4.fc43.x86_64
+2566637	epiphany-runtime-49.1-1.fc43.x86_64
+2557137	alsa-utils-1.2.14-2.fc43.x86_64
+2551503	mdevctl-1.4.0-2.fc43.x86_64
+2505850	urw-base35-nimbus-sans-fonts-20200910-26.fc43.noarch
+2499507	libetonyek-0.1.12-7.fc43.x86_64
+2497966	gnome-text-editor-49.0-1.fc43.x86_64
+2485708	gnome-tour-48.1-3.fc43.x86_64
+2469607	kernel-tools-6.17.1-300.fc43.x86_64
+2465350	m17n-db-1.8.10-2.fc43.noarch
+2455554	aardvark-dns-1.16.0-1.fc43.x86_64
+2439070	LibRaw-0.21.4-2.fc43.x86_64
+2437503	libreoffice-ure-common-25.8.1.1-0.2.fc43.x86_64
+2434370	systemd-libs-258-1.fc43.x86_64
+2403056	xorg-x11-server-Xwayland-24.1.8-2.fc43.x86_64
+2401344	cyrus-sasl-lib-2.1.28-33.fc43.x86_64
+2393703	krb5-libs-1.21.3-7.fc43.x86_64
+2386481	p11-kit-0.25.8-1.fc43.x86_64
+2385032	opensc-libs-0.26.1-3.fc43.x86_64
+2381386	smartmontools-7.5-4.fc43.x86_64
+2364646	systemd-networkd-258-1.fc43.x86_64
+2354596	systemd-container-258-1.fc43.x86_64
+2345864	libstaroffice-0.0.7-16.fc43.x86_64
+2327426	yelp-49.0-1.fc43.x86_64
+2321376	libcamera-0.5.2-4.fc43.x86_64
+2320102	libdnf-0.74.0-10.fc43.x86_64
+2299185	gnome-contacts-49.0-1.fc43.x86_64
+2299050	gettext-libs-0.25.1-2.fc43.x86_64
+2298018	jomolhari-fonts-0.003-44.fc43.noarch
+2295987	ctags-6.2.0-1.fc43.x86_64
+2239864	shim-ia32-15.8-3.x86_64
+2217133	adwaita-icon-theme-legacy-46.2-4.fc43.noarch
+2215240	liblangtag-data-0.6.7-6.fc43.noarch
+2207316	libreoffice-pyuno-25.8.1.1-0.2.fc43.x86_64
+2185780	open-sans-fonts-1.10-24.fc43.noarch
+2184633	python3-regex-2025.8.29-2.fc43.x86_64
+2171328	libwps-0.4.14-6.fc43.x86_64
+2166158	gjs-1.86.0-1.fc43.x86_64
+2164224	libwnck3-43.3-1.fc43.x86_64
+2151370	iproute-6.14.0-2.fc43.x86_64
+2147541	dhcp-client-4.4.3-22.fc43.x86_64
+2143091	cockpit-bridge-348-1.fc43.noarch
+2125782	evolution-ews-core-3.58.0-1.fc43.x86_64
+2117601	prefixdevname-0.2.0-7.fc43.x86_64
+2115706	firewalld-2.3.1-5.fc43.noarch
+2035941	ptyxis-49.1-1.fc43.x86_64
+2027059	nss-softokn-3.115.1-1.fc43.x86_64
+1989514	libreoffice-gtk3-25.8.1.1-0.2.fc43.x86_64
+1983690	libuser-0.64-16.fc43.x86_64
+1980275	gnome-remote-desktop-49.1-1.fc43.x86_64
+1975903	cirrus-audio-firmware-20251021-1.fc43.noarch
+1974845	openssh-server-10.0p1-5.fc43.x86_64
+1964590	nss-3.115.1-1.fc43.x86_64
+1948123	gnome-initial-setup-49.0-1.fc43.x86_64
+1944229	libgdata-0.18.1-15.fc43.x86_64
+1938991	findutils-4.10.0-6.fc43.x86_64
+1921719	xdg-desktop-portal-1.20.3-2.fc43.x86_64
+1908317	iwlwifi-dvm-firmware-20251021-1.fc43.noarch
+1907213	openssl-3.5.1-2.fc43.x86_64
+1906108	libreoffice-gtk4-25.8.1.1-0.2.fc43.x86_64
+1904199	xen-libs-4.20.1-6.fc43.x86_64
+1897416	cockpit-ws-348-1.fc43.x86_64
+1893735	libopenmpt-0.8.3-1.fc43.x86_64
+1887636	gawk-5.3.2-2.fc43.x86_64
+1882208	djvulibre-libs-3.5.28-14.fc43.x86_64
+1865075	openvpn-2.6.15-1.fc43.x86_64
+1855309	cairo-1.18.4-2.fc43.x86_64
+1849669	liborcus-0.20.2-2.fc43.x86_64
+1842999	gcr-libs-4.4.0.1-2.fc43.x86_64
+1832860	gawk-all-langpacks-5.3.2-2.fc43.x86_64
+1832558	clucene-core-2.3.3.4-52.20130812.e8e3d20git.fc43.x86_64
+1808725	libunistring-1.1-10.fc43.x86_64
+1801306	adwaita-sans-fonts-49.0-2.fc43.noarch
+1796414	vim-minimal-9.1.1818-1.fc43.x86_64
+1796387	gnome-clocks-49.0-1.fc43.x86_64
+1789457	zstd-1.5.7-2.fc43.x86_64
+1784380	libxml2-2.12.10-5.fc43.x86_64
+1774663	libdav1d-1.5.1-2.fc43.x86_64
+1759623	gcr3-3.41.1-11.fc43.x86_64
+1757581	baobab-49.0-1.fc43.x86_64
+1747660	fedora-logos-42.0.1-2.fc43.noarch
+1719492	tuned-2.26.0-2.fc43.noarch
+1710486	pam-1.7.1-3.fc43.x86_64
+1698382	tzdata-2025b-3.fc43.noarch
+1687730	adobe-source-code-pro-fonts-2.042.1.062.1.026-7.fc43.noarch
+1679185	liberation-sans-fonts-2.1.5-14.fc43.noarch
+1672550	python3-langtable-0.0.69-4.fc43.noarch
+1671197	criu-4.1.1-2.fc43.x86_64
+1665881	google-noto-serif-vf-fonts-20250901-1.fc43.noarch
+1660704	checkpolicy-3.9-2.fc43.x86_64
+1655765	openal-soft-1.24.2-4.fc43.x86_64
+1649718	libgcrypt-1.11.1-2.fc43.x86_64
+1647584	sil-padauk-fonts-3.003-20.fc43.noarch
+1638222	avahi-0.9~rc2-6.fc43.x86_64
+1637030	tpm2-tss-4.1.3-8.fc43.x86_64
+1633539	dracut-107-8.fc43.x86_64
+1627833	diffutils-3.12-3.fc43.x86_64
+1627435	libheif-1.20.2-6.fc43.x86_64
+1616749	libcupsfilters-2.1.1-4.fc43.x86_64
+1612710	at-spi2-core-2.58.1-1.fc43.x86_64
+1600421	rit-rachana-fonts-1.5.2-4.fc43.noarch
+1594703	qt6-qtpositioning-6.9.2-1.fc43.x86_64
+1588944	sqlite-libs-3.50.2-2.fc43.x86_64
+1583146	ModemManager-glib-1.24.2-1.fc43.x86_64
+1568765	gnome-online-accounts-3.56.0-1.fc43.x86_64
+1568360	tpm2-tools-5.7-4.fc43.x86_64
+1566219	python3-gobject-base-3.54.3-1.fc43.x86_64
+1566044	python3-pycparser-2.22-5.fc43.noarch
+1564722	hplip-common-3.25.6-1.fc43.x86_64
+1557220	urw-base35-p052-fonts-20200910-26.fc43.noarch
+1545283	liberation-serif-fonts-2.1.5-14.fc43.noarch
+1537271	evolution-ews-langpacks-3.58.0-1.fc43.noarch
+1534232	iptables-libs-1.8.11-11.fc43.x86_64
+1528751	util-linux-core-2.41.1-17.fc43.x86_64
+1528029	gnome-logs-49.0-1.fc43.x86_64
+1523301	gst-editing-services-1.26.6-2.fc43.x86_64
+1515659	unbound-libs-1.23.1-3.fc43.x86_64
+1508969	kbd-2.8.0-3.fc43.x86_64
+1503598	libsamplerate-0.2.2-11.fc43.x86_64
+1499420	alsa-lib-1.2.14-4.fc43.x86_64
+1482721	pipewire-utils-1.4.8-2.fc43.x86_64
+1478290	libtraceevent-1.8.4-4.fc43.x86_64
+1465238	yelp-xsl-49.0-1.fc43.noarch
+1462589	exempi-2.6.4-8.fc43.x86_64
+1460518	urw-base35-c059-fonts-20200910-26.fc43.noarch
+1458274	slang-2.3.3-8.fc43.x86_64
+1457784	google-noto-sans-vf-fonts-20250901-1.fc43.noarch
+1455073	openssh-10.0p1-5.fc43.x86_64
+1453835	papers-thumbnailer-49.1-2.fc43.x86_64
+1442093	iscsi-initiator-utils-6.2.1.11-0.git4b3e853.fc43.2.x86_64
+1430408	webrtc-audio-processing-1.3-9.fc43.x86_64
+1430336	codec2-1.2.0-7.fc43.x86_64
+1429732	urw-base35-nimbus-roman-fonts-20200910-26.fc43.noarch
+1429669	bash-completion-2.16-2.fc43.noarch
+1428570	urw-base35-bookman-fonts-20200910-26.fc43.noarch
+1423342	libhandy-1.8.3-5.fc43.x86_64
+1421889	python3-cffi-2.0.0-2.fc43.x86_64
+1420410	libwacom-data-2.16.1-2.fc43.noarch
+1409789	hunspell-1.7.2-10.fc43.x86_64
+1409665	gnome-session-49.1-1.fc43.x86_64
+1405009	dnf5-plugins-5.2.17.0-2.fc43.x86_64
+1404034	perl-Net-SSLeay-1.94-11.fc43.x86_64
+1384119	mbedtls-3.6.4-3.fc43.x86_64
+1374187	xz-5.8.1-2.fc43.x86_64
+1369293	lttng-ust-2.14.0-4.fc43.x86_64
+1367358	NetworkManager-openvpn-1.12.3-1.fc43.x86_64
+1360663	gnutls-utils-3.8.10-3.fc43.x86_64
+1358102	libertas-firmware-20251021-1.fc43.noarch
+1356434	libtinysparql-3.10.1-1.fc43.x86_64
+1343076	libX11-1.8.12-1.fc43.x86_64
+1336486	zxing-cpp-2.2.1-5.fc43.x86_64
+1331044	wireplumber-libs-0.5.11-1.fc43.x86_64
+1324216	nfs-utils-2.8.4-0.fc43.x86_64
+1305012	python-pip-wheel-25.1.1-18.fc43.noarch
+1292242	python3-anyio-4.8.0-7.fc43.noarch
+1289130	graphviz-libs-13.1.1-3.fc43.x86_64
+1278367	gperftools-libs-2.17.2-1.fc43.x86_64
+1276948	opensc-0.26.1-3.fc43.x86_64
+1272325	tcpdump-4.99.5-6.fc43.x86_64
+1267543	virglrenderer-1.2.0-2.fc43.x86_64
+1263451	python3-dnf-plugins-core-4.10.1-6.fc43.noarch
+1255271	lame-libs-3.100-20.fc43.x86_64
+1254181	libosinfo-1.12.0-3.fc43.x86_64
+1252525	tmux-3.5a-5.fc43.x86_64
+1249821	gnome-font-viewer-49.0-1.fc43.x86_64
+1248661	gvfs-1.58.0-1.fc43.x86_64
+1246253	gnome-connections-49.0-1.fc43.x86_64
+1240591	zvbi-0.2.44-2.fc43.x86_64
+1233413	libsoup-2.74.3-9.fc43.x86_64
+1233283	passt-0^20250919.g623dbf6-1.fc43.x86_64
+1232988	adwaita-icon-theme-49.0-1.fc43.noarch
+1232422	augeas-libs-1.14.2-0.6.20250415gitaf2aa88.fc43.x86_64
+1231438	spice-server-0.16.0-2.fc43.x86_64
+1226229	spice-glib-0.42-7.fc43.x86_64
+1222048	liberation-mono-fonts-2.1.5-14.fc43.noarch
+1220874	ostree-libs-2025.6-1.fc43.x86_64
+1220744	elfutils-libelf-0.193-3.fc43.x86_64
+1217400	libibverbs-58.0-4.fc43.x86_64
+1216723	urw-base35-gothic-fonts-20200910-26.fc43.noarch
+1215583	python3-click-8.1.7-11.fc43.noarch
+1212746	systemd-pam-258-1.fc43.x86_64
+1208015	libwinpr-3.16.0-4.fc43.x86_64
+1206184	libX11-common-1.8.12-1.fc43.noarch
+1203526	libplacebo-7.351.0-3.fc43.x86_64
+1201435	evince-libs-48.1-1.fc43.x86_64
+1197121	libcmis-0.6.2-9.fc43.x86_64
+1193018	libsoup3-3.6.5-8.fc43.x86_64
+1171042	seabios-bin-1.17.0-6.fc43.noarch
+1169700	vte291-0.82.1-1.fc43.x86_64
+1156964	libnma-1.10.6-10.fc43.x86_64
+1156602	taglib-1.13.1-6.fc43.x86_64
+1146383	cpio-2.15-6.fc43.x86_64
+1146063	genisoimage-1.1.11-60.fc43.x86_64
+1140494	python3-urllib3-2.5.0-3.fc43.noarch
+1140489	gutenprint-cups-5.3.5-6.fc43.x86_64
+1129937	libmbim-1.32.0-2.fc43.x86_64
+1129292	libepoxy-1.5.10-11.fc43.x86_64
+1128580	hunspell-en-0.20201207-12.fc43.noarch
+1119892	texlive-lib-20230311-93.fc43.x86_64
+1116939	libxcb-1.17.0-6.fc43.x86_64
+1100338	urw-base35-nimbus-mono-ps-fonts-20200910-26.fc43.noarch
+1099934	wget2-2.2.0-6.fc43.x86_64
+1092010	libvncserver-0.9.15-4.fc43.x86_64
+1087350	flatpak-libs-1.16.1-1.fc43.x86_64
+1076446	gnome-bluetooth-libs-47.1-3.fc43.x86_64
+1072982	python3-beautifulsoup4-4.14.2-1.fc43.noarch
+1072449	nftables-1.1.3-5.fc43.x86_64
+1069066	libtpms-0.10.1-2.fc43.x86_64
+1068487	libnl3-3.11.0-6.fc43.x86_64
+1064687	ibus-anthy-python-1.5.17-7.fc43.noarch
+1064185	libreoffice-graphicfilter-25.8.1.1-0.2.fc43.x86_64
+1062318	glibc-common-2.42-4.fc43.x86_64
+1061795	libnl3-cli-3.11.0-6.fc43.x86_64
+1061729	mdadm-4.3-9.fc43.x86_64
+1050220	libudisks2-2.10.91-1.fc43.x86_64
+1047181	procps-ng-4.0.4-7.fc43.x86_64
+1041463	grep-3.12-2.fc43.x86_64
+1034084	pango-1.57.0-1.fc43.x86_64
+1020278	ethtool-6.15-3.fc43.x86_64
+1019243	ntfsprogs-2022.10.3-10.fc43.x86_64
+1018211	qemu-pr-helper-10.1.0-7.fc43.x86_64
+1017666	srt-libs-1.5.4-4.fc43.x86_64
+1015906	python3-httpx-0.28.1-9.fc43.noarch
+1015526	libvirt-client-11.6.0-1.fc43.x86_64
+1015342	qemu-guest-agent-10.1.0-7.fc43.x86_64
+1009367	kyotocabinet-libs-1.2.80-8.fc43.x86_64
+1002062	cups-filters-2.0.1-9.fc43.x86_64
+994407	libsolv-0.7.34-5.fc43.x86_64
+992466	google-noto-sans-math-fonts-20250901-1.fc43.noarch
+989523	vte291-gtk4-0.82.1-1.fc43.x86_64
+988668	libgsf-1.14.53-4.fc43.x86_64
+986458	xdg-desktop-portal-gnome-49.0-1.fc43.x86_64
+986109	libical-3.0.20-4.fc43.x86_64
+979523	libwebp-1.6.0-2.fc43.x86_64
+973917	libarchive-3.8.1-3.fc43.x86_64
+972352	edk2-shell-x64-20250812-18.fc43.noarch
+968991	ncurses-libs-6.5-7.20250614.fc43.x86_64
+965094	libavutil-free-7.1.2-2.fc43.x86_64
+963175	nbdkit-basic-filters-1.45.8-1.fc43.x86_64
+956922	ppp-2.5.1-6.fc43.x86_64
+956080	rpm-libs-6.0.0-1.fc43.x86_64
+950867	libgee-0.20.8-2.fc43.x86_64
+947102	libdnf5-cli-5.2.17.0-2.fc43.x86_64
+946368	distribution-gpg-keys-1.114-1.fc43.noarch
+946077	papers-libs-49.1-2.fc43.x86_64
+940112	zram-generator-1.2.1-3.fc43.x86_64
+939600	libpinyin-2.10.2-2.fc43.x86_64
+937221	libgpg-error-1.55-2.fc43.x86_64
+928421	python3-jsonschema-4.23.0-6.fc43.noarch
+926972	nxpwireless-firmware-20251021-1.fc43.noarch
+923341	lvm2-dbusd-2.03.34-2.fc43.noarch
+921353	libvirt-daemon-driver-storage-core-11.6.0-1.fc43.x86_64
+916579	iproute-tc-6.14.0-2.fc43.x86_64
+915523	zeromq-4.3.5-22.fc43.x86_64
+913963	xeve-libs-0.5.1-5.fc43.x86_64
+909899	libvirt-daemon-driver-network-11.6.0-1.fc43.x86_64
+907627	libcdr-0.1.8-4.fc43.x86_64
+907247	authselect-libs-1.6.2-1.fc43.x86_64
+906528	libglusterfs0-11.2-4.fc43.x86_64
+904290	libevent-2.1.12-16.fc43.x86_64
+899447	xvidcore-1.3.7-14.fc43.x86_64
+899096	tpm2-tss-fapi-4.1.3-8.fc43.x86_64
+898607	python3-dateutil-2.9.0.post0-6.fc43.noarch
+895571	device-mapper-multipath-libs-0.11.1-2.fc43.x86_64
+894359	google-noto-emoji-fonts-20250623-2.fc43.noarch
+894180	qt6-qtsvg-6.9.2-1.fc43.x86_64
+887301	rasqal-0.9.33-31.fc43.x86_64
+886778	libcaca-0.99-0.80.beta20.fc43.x86_64
+886015	net-tools-2.0-0.74.20160912git.fc43.x86_64
+877888	sed-4.9-5.fc43.x86_64
+874405	python3-httpcore-1.0.9-5.fc43.noarch
+870615	freetype-2.13.3-3.fc43.x86_64
+869200	libqmi-utils-1.36.0-2.fc43.x86_64
+868777	libvirt-daemon-driver-nwfilter-11.6.0-1.fc43.x86_64
+868678	nss-softokn-freebl-3.115.1-1.fc43.x86_64
+863238	ibus-libs-1.5.33~rc2-2.fc43.x86_64
+859150	libfprint-1.94.9-4.fc43.x86_64
+853713	realmd-0.17.1-18.fc43.x86_64
+853357	libvorbis-1.3.7-13.fc43.x86_64
+853290	libbrotli-1.1.0-10.fc43.x86_64
+852779	mpfr-4.2.2-2.fc43.x86_64
+851216	usermode-1.114-13.fc43.x86_64
+850664	colord-libs-1.4.8-2.fc43.x86_64
+850657	fprintd-1.94.5-2.fc43.x86_64
+849597	psmisc-23.7-6.fc43.x86_64
+848243	iputils-20250605-1.fc43.x86_64
+846857	libvmaf-3.0.0-4.fc43.x86_64
+843268	dos2unix-7.5.2-4.fc43.x86_64
+843122	libvirt-daemon-driver-nodedev-11.6.0-1.fc43.x86_64
+841683	libsepol-3.9-2.fc43.x86_64
+834000	gstreamer1-plugin-gtk4-0.14.2-1.fc43.x86_64
+833575	mpg123-libs-1.32.10-2.fc43.x86_64
+830696	gmp-6.3.0-4.fc43.x86_64
+830376	makedumpfile-1.7.7-4.fc43.x86_64
+828573	gnome-weather-49.0-1.fc43.noarch
+828088	intel-gmmlib-22.8.2-1.fc43.x86_64
+826309	cockpit-storaged-348-1.fc43.noarch
+824207	libjpeg-turbo-3.1.2-1.fc43.x86_64
+819086	libzstd-1.5.7-2.fc43.x86_64
+818003	libreoffice-impress-25.8.1.1-0.2.fc43.x86_64
+812489	python3-pyyaml-6.0.2-7.fc43.x86_64
+810058	gcr3-base-3.41.1-11.fc43.x86_64
+809536	nettle-3.10.1-2.fc43.x86_64
+803033	kf6-karchive-6.18.0-1.fc43.x86_64
+802198	libthai-0.1.29-11.fc43.x86_64
+795732	rsync-3.4.1-4.fc43.x86_64
+795541	catatonit-0.2.1-3.fc43.x86_64
+786647	dnsmasq-2.90-7.fc43.x86_64
+785439	poppler-utils-25.07.0-2.fc43.x86_64
+784300	fontconfig-2.17.0-3.fc43.x86_64
+782605	libnumbertext-1.0.11-9.fc43.x86_64
+781411	oniguruma-6.9.10-3.fc43.x86_64
+776892	libvirt-daemon-driver-interface-11.6.0-1.fc43.x86_64
+775942	libodfgen-0.1.8-15.fc43.x86_64
+774046	jxrlib-1.1-32.fc43.x86_64
+773752	cryptsetup-2.8.1-1.fc43.x86_64
+772768	gnome-online-accounts-libs-3.56.0-1.fc43.x86_64
+772709	qemu-device-display-vhost-user-gpu-10.1.0-7.fc43.x86_64
+772152	gnome-user-share-48.1-2.fc43.x86_64
+768468	libvirt-daemon-driver-secret-11.6.0-1.fc43.x86_64
+766645	librevenge-0.0.5-12.fc43.x86_64
+765755	python3-rpds-py-0.27.0-2.fc43.x86_64
+760771	glib-networking-2.80.1-3.fc43.x86_64
+752336	libvirt-daemon-11.6.0-1.fc43.x86_64
+750672	systemd-resolved-258-1.fc43.x86_64
+750368	libppd-2.1.1-2.fc43.x86_64
+748164	python3-idna-3.10-6.fc43.noarch
+745997	libvirt-daemon-proxy-11.6.0-1.fc43.x86_64
+745119	anaconda-tui-43.44-3.fc43.x86_64
+743779	orc-0.4.41-2.fc43.x86_64
+742793	libblkio-1.5.0-4.fc43.x86_64
+742387	setup-2.15.0-26.fc43.noarch
+741028	flac-libs-1.5.0-3.fc43.x86_64
+731609	perl-IO-Socket-SSL-2.095-2.fc43.noarch
+730822	libmodulemd-2.15.2-4.fc43.x86_64
+729718	libcurl-minimal-8.15.0-2.fc43.x86_64
+727375	pixman-0.46.2-2.fc43.x86_64
+725162	lpsolve-5.5.2.11-9.fc43.x86_64
+714458	pcre2-10.46-1.fc43.x86_64
+714338	quota-4.10-2.fc43.x86_64
+711371	volume_key-libs-0.3.12-28.fc43.x86_64
+711193	zip-3.0-44.fc43.x86_64
+707525	libimagequant-4.0.3-8.fc43.x86_64
+706800	chrony-4.8-1.fc43.x86_64
+702486	libwpd-0.10.3-23.fc43.x86_64
+701880	policycoreutils-3.9-5.fc43.x86_64
+699789	elfutils-libs-0.193-3.fc43.x86_64
+699055	libcamera-ipa-0.5.2-4.fc43.x86_64
+695992	libyuv-0-0.57.20240704git96bbdb5.fc43.x86_64
+688880	libvisio-0.1.8-5.fc43.x86_64
+688620	redhat-menus-12.0.2-30.fc43.noarch
+688345	gstreamer1-plugins-ugly-free-1.26.6-1.fc43.x86_64
+687545	gnupg2-gpg-agent-2.4.8-4.fc43.x86_64
+681154	bind-utils-9.18.39-4.fc43.x86_64
+677332	libstemmer-3.0.1-8.fc43.x86_64
+675711	openldap-2.6.10-4.fc43.x86_64
+673540	qatlib-25.08.0-2.fc43.x86_64
+673014	google-noto-sans-symbols-2-fonts-20250901-1.fc43.noarch
+671446	showtime-49.0-2.fc43.noarch
+670762	gnulib-l10n-20241231-1.fc43.noarch
+669287	squashfs-tools-4.6.1-7.fc43.x86_64
+653720	antiword-0.37-42.fc43.x86_64
+653532	libinput-1.29.1-1.fc43.x86_64
+651132	udisks2-lvm2-2.10.91-1.fc43.x86_64
+649128	poppler-glib-25.07.0-2.fc43.x86_64
+648183	sdbus-cpp-2.1.0-3.fc43.x86_64
+642403	qt5-qtsvg-5.15.17-2.fc43.x86_64
+641344	pcre2-utf16-10.46-1.fc43.x86_64
+639710	python3-pexpect-4.9.0-14.fc43.noarch
+639053	liblerc-4.0.0-9.fc43.x86_64
+638613	gnome-menus-3.36.0-14.fc43.x86_64
+634276	libswscale-free-7.1.2-2.fc43.x86_64
+633891	libtiff-4.7.0-8.fc43.x86_64
+633534	cups-libs-2.4.14-2.fc43.x86_64
+633256	gnupg2-dirmngr-2.4.8-4.fc43.x86_64
+632561	boost-locale-1.83.0-17.fc43.x86_64
+630568	duktape-2.7.0-10.fc43.x86_64
+630150	gnome-shell-extension-common-49.0-2.fc43.noarch
+628655	rutabaga-gfx-ffi-0.1.3-4.fc43.x86_64
+626456	fdk-aac-free-2.0.0-16.fc43.x86_64
+624392	ncurses-6.5-7.20250614.fc43.x86_64
+623012	python3-libselinux-3.9-5.fc43.x86_64
+621951	python3-packaging-25.0-7.fc43.noarch
+621870	simdutf-7.2.1-2.fc43.x86_64
+619919	libdovi-3.3.2-1.fc43.x86_64
+617535	python3-dbus-next-0.2.3-17.fc43.noarch
+616688	pcre2-utf32-10.46-1.fc43.x86_64
+615646	libglvnd-glx-1.7.0-8.fc43.x86_64
+611027	thermald-2.5.9-2.fc43.x86_64
+609170	brlapi-0.8.7-4.fc43.x86_64
+607360	faad2-libs-2.11.2-4.fc43.x86_64
+606550	json-glib-1.10.8-1.fc43.x86_64
+602030	gpgme-1.24.3-6.fc43.x86_64
+600572	libreoffice-pdfimport-25.8.1.1-0.2.fc43.x86_64
+599654	libshumate-1.5.0.1-1.fc43.x86_64
+597528	libcdio-2.1.0-15.fc43.x86_64
+597344	re2-20250812-4.fc43.x86_64
+596984	udisks2-iscsi-2.10.91-1.fc43.x86_64
+596045	adobe-mappings-cmap-deprecated-20231115-3.fc43.noarch
+592399	lsof-4.98.0-8.fc43.x86_64
+592000	wavpack-5.8.1-3.fc43.x86_64
+591363	crun-1.24-1.fc43.x86_64
+588993	python3-ply-3.11-30.fc43.noarch
+588573	udisks2-btrfs-2.10.91-1.fc43.x86_64
+585094	kbd-legacy-2.8.0-3.fc43.noarch
+584998	f2fs-tools-1.16.0-9.fc43.x86_64
+584599	zimg-3.0.6-2.fc43.x86_64
+583844	libuv-1.51.0-2.fc43.x86_64
+583163	alsa-ucm-1.2.14-4.fc43.noarch
+581894	gstreamer1-plugin-dav1d-0.14.0-1.fc43.x86_64
+580705	libssh-0.11.3-1.fc43.x86_64
+579790	libical-glib-3.0.20-4.fc43.x86_64
+578835	libsecret-0.21.7-4.fc43.x86_64
+578822	perl-Pod-Simple-3.47-3.fc43.noarch
+576945	raptor2-2.0.15-49.fc43.x86_64
+574696	google-noto-sans-mono-vf-fonts-20250901-1.fc43.noarch
+570772	hunspell-en-US-0.20201207-12.fc43.noarch
+570377	malcontent-0.13.0-3.fc43.x86_64
+565788	libidn2-2.3.8-2.fc43.x86_64
+563276	libsndfile-1.2.2-10.fc43.x86_64
+562693	NetworkManager-vpnc-1.4.0-4.fc43.x86_64
+560271	xmlsec1-1.2.41-3.fc43.x86_64
+557666	vulkan-loader-1.4.321.0-3.fc43.x86_64
+556242	hunspell-en-GB-0.20201207-12.fc43.noarch
+555772	plocate-1.1.23-4.fc43.x86_64
+555148	libnfs-6.0.2-6.fc43.x86_64
+555053	gnome-abrt-1.4.3-8.fc43.x86_64
+554334	libfyaml-0.8-8.fc43.x86_64
+554094	libgomp-15.2.1-2.fc43.x86_64
+551344	python3-typing-extensions-4.15.0-2.fc43.noarch
+547991	e2fsprogs-libs-1.47.3-2.fc43.x86_64
+545705	python3-dbus-1.4.0-7.fc43.x86_64
+538758	libglvnd-1.7.0-8.fc43.x86_64
+538314	abattis-cantarell-fonts-0.301-15.fc43.noarch
+535525	glusterfs-fuse-11.2-4.fc43.x86_64
+533104	PackageKit-glib-1.3.1-6.fc43.x86_64
+528216	python3-unbound-1.23.1-3.fc43.x86_64
+527805	libbabeltrace-1.5.11-15.fc43.x86_64
+524542	mariadb-connector-c-3.4.5-2.fc43.x86_64
+524021	readline-8.3-2.fc43.x86_64
+523058	python3-libreport-2.17.15-9.fc43.x86_64
+520558	google-noto-sans-ethiopic-vf-fonts-20250901-1.fc43.noarch
+518104	redland-1.0.17-40.fc43.x86_64
+516058	mobile-broadband-provider-info-20240407-4.fc43.noarch
+515504	isns-utils-libs-0.103-3.fc43.x86_64
+515461	bolt-0.9.10-2.fc43.x86_64
+513356	perl-B-1.89-520.fc43.x86_64
+511475	xmlrpc-c-1.60.04-4.fc43.x86_64
+509676	libnice-0.1.22-8.fc43.x86_64
+509416	audit-4.1.1-2.fc43.x86_64
+509348	libgtop2-2.41.3-4.fc43.x86_64
+509325	libmtp-1.1.19-10.fc43.x86_64
+508555	pipewire-jack-audio-connection-kit-libs-1.4.8-2.fc43.x86_64
+505262	igvm-libs-0.4.0-2.fc43.x86_64
+504708	python3-cairo-1.28.0-4.fc43.x86_64
+496514	blivet-data-3.12.1-9.fc43.noarch
+494207	sane-backends-drivers-cameras-1.4.0-4.fc43.x86_64
+493281	decibels-49.0-1.fc43.noarch
+492442	liblouis-3.33.0-6.fc43.x86_64
+488750	libtheora-1.1.1-40.fc43.x86_64
+488373	python3-requests-2.32.5-2.fc43.noarch
+488074	python3-simpleline-1.9.0-17.fc43.noarch
+487150	freeglut-3.6.0-6.fc43.x86_64
+485599	nilfs-utils-2.2.11-7.fc43.x86_64
+484950	curl-8.15.0-2.fc43.x86_64
+484627	xdg-desktop-portal-gtk-1.15.3-2.fc43.x86_64
+483209	aajohan-comfortaa-fonts-3.105-0.7.20210729git2a87ac6.fc43.noarch
+478504	libnbd-1.23.8-2.fc43.x86_64
+477342	libopenjph-0.22.0-2.fc43.x86_64
+476835	nmap-ncat-7.92-6.fc43.x86_64
+475303	iptables-nft-1.8.11-11.fc43.x86_64
+472653	glusterfs-cli-11.2-4.fc43.x86_64
+471450	sound-theme-freedesktop-0.8-24.fc43.noarch
+471351	gdbm-1.23-10.fc43.x86_64
+471155	libxslt-1.1.43-5.fc43.x86_64
+470985	polkit-126-6.fc43.x86_64
+470661	m17n-lib-1.8.6-2.fc43.x86_64
+470118	rubberband-libs-4.0.0-4.fc43.x86_64
+469972	gnome-desktop4-44.4-1.fc43.x86_64
+467288	gdb-16.3-6.fc43.x86_64
+467225	openjpeg-2.5.4-1.fc43.x86_64
+466415	nbdkit-basic-plugins-1.45.8-1.fc43.x86_64
+464658	libexttextcat-3.4.6-12.fc43.x86_64
+463521	libvisual-0.4.2-3.fc43.x86_64
+463130	libusal-1.1.11-60.fc43.x86_64
+461725	libldb-4.23.1-1.fc43.x86_64
+460904	libe-book-0.1.3-40.fc43.x86_64
+460571	libfreehand-0.1.2-26.fc43.x86_64
+457225	p11-kit-trust-0.25.8-1.fc43.x86_64
+457124	open-vm-tools-desktop-13.0.0-1.fc43.x86_64
+454857	gettext-runtime-0.25.1-2.fc43.x86_64
+454581	python3-pyxdg-0.27-18.fc43.noarch
+450774	dbus-daemon-1.16.0-4.fc43.x86_64
+449705	jq-1.7.1-12.fc43.x86_64
+447881	gstreamer1-plugin-libav-1.26.6-1.fc43.x86_64
+446926	libreoffice-opensymbol-fonts-25.8.1.1-0.2.fc43.noarch
+446590	pipewire-pulseaudio-1.4.8-2.fc43.x86_64
+444099	lcms2-2.16-6.fc43.x86_64
+442823	udftools-2.3-12.fc43.x86_64
+440113	libXt-1.3.1-3.fc43.x86_64
+439864	pipewire-1.4.8-2.fc43.x86_64
+439549	gpgmepp-1.24.3-6.fc43.x86_64
+437825	opus-1.5.2-3.fc43.x86_64
+436775	libvpl-2.15.0-3.fc43.x86_64
+435491	mod_http2-2.0.32-2.fc43.x86_64
+435446	hplip-libs-3.25.6-1.fc43.x86_64
+433324	libbsd-0.12.2-6.fc43.x86_64
+432996	libbpf-1.6.1-3.fc43.x86_64
+431976	google-noto-serif-ethiopic-vf-fonts-20250901-1.fc43.noarch
+429963	amd-ucode-firmware-20251021-1.fc43.noarch
+428692	liblouisutdml-2.12.0-7.fc43.x86_64
+428612	glx-utils-9.0.0-10.fc43.x86_64
+428233	device-mapper-libs-1.02.208-2.fc43.x86_64
+427480	libpmem-2.1.0-4.fc43.x86_64
+426612	sushi-46.0-4.fc43.x86_64
+426483	libmspub-0.1.4-38.fc43.x86_64
+426123	tslib-1.23-2.fc43.x86_64
+425704	qt6-qtwebchannel-6.9.2-1.fc43.x86_64
+425218	libpcap-1.10.5-3.fc43.x86_64
+424357	python3-pyatspi-2.58.0-2.fc43.noarch
+420582	python3-attrs-25.3.0-6.fc43.noarch
+419066	libpwquality-1.4.5-14.fc43.x86_64
+417988	libxkbcommon-1.11.0-1.fc43.x86_64
+415841	less-679-2.fc43.x86_64
+413291	gd-2.3.3-19.fc43.x86_64
+412658	python3-dasbus-1.7-13.fc43.noarch
+409217	sdl2-compat-2.32.56-2.fc43.x86_64
+408427	wireplumber-0.5.11-1.fc43.x86_64
+408100	libksba-1.6.7-4.fc43.x86_64
+407169	libbluray-1.3.4-9.fc42.x86_64
+405785	cups-browsed-2.1.1-5.fc43.x86_64
+405425	python3-pyparted-3.13.0-13.fc43.x86_64
+405293	libdrm-2.4.125-2.fc43.x86_64
+405213	geoclue2-2.7.2-3.fc43.x86_64
+404605	python3-enchant-3.2.2-23.fc43.noarch
+402212	gobject-introspection-1.84.0-3.fc43.x86_64
+400137	urw-base35-z003-fonts-20200910-26.fc43.noarch
+400055	crypto-policies-scripts-20250714-5.gitcd6043a.fc43.noarch
+398496	efivar-libs-39-10.fc43.x86_64
+398387	libsodium-1.0.20-6.fc43.x86_64
+398154	gzip-1.13-4.fc43.x86_64
+397417	libvirt-daemon-common-11.6.0-1.fc43.x86_64
+396491	dbus-broker-37-2.fc43.x86_64
+395539	unzip-6.0-67.fc43.x86_64
+391929	python3-libsemanage-3.9-4.fc43.x86_64
+391484	libvirt-gconfig-5.0.0-7.fc43.x86_64
+389538	libfdisk-2.41.1-17.fc43.x86_64
+388857	imath-3.1.12-4.fc43.x86_64
+387935	audit-libs-4.1.1-2.fc43.x86_64
+385340	accountsservice-23.13.9-9.fc43.x86_64
+385223	libepubgen-0.1.1-21.fc43.x86_64
+384311	cups-pk-helper-0.2.7-10.fc43.x86_64
+384260	libblockdev-3.4.0-1.fc43.x86_64
+381618	libmount-2.41.1-17.fc43.x86_64
+376747	xevd-libs-0.5.0-5.fc43.x86_64
+376048	libmanette-0.2.13-1.fc43.x86_64
+375134	seavgabios-bin-1.17.0-6.fc43.noarch
+374353	wget2-libs-2.2.0-6.fc43.x86_64
+373576	ntfs-3g-libs-2022.10.3-10.fc43.x86_64
+370476	mesa-libGLU-9.0.3-7.fc43.x86_64
+369962	libv4l-1.30.1-4.fc43.x86_64
+369466	atkmm-2.28.4-4.fc43.x86_64
+366345	gupnp-av-0.14.4-2.fc43.x86_64
+364737	google-noto-serif-bengali-vf-fonts-20250901-1.fc43.noarch
+364271	pcsc-lite-ccid-1.6.2-2.fc43.x86_64
+364221	python3-charset-normalizer-3.4.3-3.fc43.noarch
+363802	google-noto-sans-sinhala-vf-fonts-20250901-1.fc43.noarch
+363717	libmodplug-0.8.9.0-28.fc43.x86_64
+363292	plymouth-core-libs-24.004.60-20.fc43.x86_64
+363215	NetworkManager-openvpn-gnome-1.12.3-1.fc43.x86_64
+361197	opencore-amr-0.1.6-9.fc43.x86_64
+361194	libnma-gtk4-1.10.6-10.fc43.x86_64
+360794	libwsman1-2.8.1-10.fc43.x86_64
+360252	game-music-emu-0.6.4-2.fc43.x86_64
+359346	libdc1394-2.2.7-8.fc43.x86_64
+359158	bluez-obexd-5.84-2.fc43.x86_64
+359005	mtools-4.0.49-2.fc43.x86_64
+358968	hfsplus-tools-540.1.linux3-35.fc43.x86_64
+358158	ngtcp2-1.15.1-1.fc43.x86_64
+356853	gnupg2-verify-2.4.8-4.fc43.x86_64
+356141	linux-firmware-whence-20251021-1.fc43.noarch
+355778	python3-systemd-235-17.fc43.x86_64
+354916	python3-productmd-1.48-4.fc43.noarch
+354902	device-mapper-1.02.208-2.fc43.x86_64
+354803	python3-olefile-0.47-11.fc43.noarch
+354577	xdg-utils-1.2.1-4.fc43.noarch
+353810	dbus-libs-1.16.0-4.fc43.x86_64
+352698	gupnp-dlna-0.12.0-11.fc43.x86_64
+351751	satyr-0.43-9.fc43.x86_64
+349986	jasper-libs-4.2.3-5.fc43.x86_64
+349957	python3-pyudev-0.24.3-12.fc43.noarch
+349797	google-noto-serif-sinhala-vf-fonts-20250901-1.fc43.noarch
+349034	gspell-1.14.0-5.fc43.x86_64
+347965	pkcs11-provider-1.0-4.fc43.x86_64
+346703	userspace-rcu-0.15.3-2.fc43.x86_64
+344568	python3-referencing-0.36.2-5.fc43.noarch
+343211	qt6-qtwebview-6.9.2-1.fc43.x86_64
+342602	gutenprint-libs-5.3.5-6.fc43.x86_64
+342587	libXfont2-2.0.7-3.fc43.x86_64
+342026	sssd-client-2.11.1-3.fc43.x86_64
+339056	plymouth-24.004.60-20.fc43.x86_64
+338526	ibus-setup-1.5.33~rc2-2.fc43.noarch
+338259	ndctl-82-2.fc43.x86_64
+337296	libva-2.22.0-6.fc43.x86_64
+336870	google-noto-serif-telugu-vf-fonts-20250901-1.fc43.noarch
+336291	libqxp-0.0.2-32.fc43.x86_64
+335977	ncurses-base-6.5-7.20250614.fc43.noarch
+335333	ibus-m17n-1.4.36-2.fc43.x86_64
+333357	dhcp-common-4.4.3-22.fc43.noarch
+332474	python3-brlapi-0.8.7-4.fc43.x86_64
+331308	python3-argcomplete-3.6.2-7.fc43.noarch
+330529	python3-speechd-0.12.1-5.fc43.x86_64
+330445	libssh2-1.11.1-4.fc43.x86_64
+329018	python3-soupsieve-2.8-2.fc43.noarch
+328910	NetworkManager-wifi-1.54.0-2.fc43.x86_64
+328634	clucene-contribs-lib-2.3.3.4-52.20130812.e8e3d20git.fc43.x86_64
+325340	usbutils-018-4.fc43.x86_64
+325071	perl-podlators-6.0.2-520.fc43.noarch
+324769	libmbim-utils-1.32.0-2.fc43.x86_64
+323048	nspr-4.37.0-3.fc43.x86_64
+320900	python3-meh-0.52-8.fc43.noarch
+319958	pangomm2.48-2.56.1-2.fc43.x86_64
+319784	openpgm-5.3.128-5.fc43.x86_64
+319757	ntfs-3g-2022.10.3-10.fc43.x86_64
+316388	libselinux-utils-3.9-5.fc43.x86_64
+315952	totem-pl-parser-3.26.6-13.fc43.x86_64
+315883	libsemanage-3.9-4.fc43.x86_64
+315407	gupnp-1.6.9-2.fc43.x86_64
+314841	dconf-0.49.0-1.fc43.x86_64
+313751	mesa-libEGL-25.2.4-2.fc43.x86_64
+312013	libimobiledevice-1.3.0^20240916gited9703d-6.fc43.x86_64
+311515	libreoffice-ogltrans-25.8.1.1-0.2.fc43.x86_64
+309054	libnvme-1.15-4.fc43.x86_64
+307613	quota-nls-4.10-2.fc43.noarch
+307564	qcom-wwan-firmware-20251021-1.fc43.noarch
+306879	openpace-1.1.3-4.fc43.x86_64
+306754	apr-1.7.6-3.fc43.x86_64
+305800	expat-2.7.2-1.fc43.x86_64
+304141	python3-inotify-0.9.6-42.fc43.noarch
+303128	gamemode-1.8.2-3.fc43.x86_64
+302654	python3-hawkey-0.74.0-10.fc43.x86_64
+302227	yelp-libs-49.0-1.fc43.x86_64
+301000	google-noto-serif-devanagari-vf-fonts-20250901-1.fc43.noarch
+299981	passt-selinux-0^20250919.g623dbf6-1.fc43.noarch
+298136	boost-regex-1.83.0-17.fc43.x86_64
+297129	xen-licenses-4.20.1-6.fc43.x86_64
+296299	perl-libnet-3.15-521.fc43.noarch
+293817	python3-audit-4.1.1-2.fc43.x86_64
+293751	vazirmatn-vf-fonts-33.003-13.fc43.noarch
+293025	mesa-libGL-25.2.4-2.fc43.x86_64
+293020	libass-0.17.3-4.fc43.x86_64
+291888	autocorr-en-25.8.1.1-0.2.fc43.noarch
+291281	libxcrypt-4.4.38-8.fc43.x86_64
+290903	pciutils-3.14.0-2.fc43.x86_64
+290570	libsane-airscan-0.99.36-1.fc43.x86_64
+290455	at-spi2-atk-2.58.1-1.fc43.x86_64
+290243	abrt-addon-ccpp-2.17.7-1.fc43.x86_64
+288698	spice-gtk3-0.42-7.fc43.x86_64
+288268	fuse3-libs-3.16.2-5.fc42.x86_64
+287599	upower-1.90.10-1.fc43.x86_64
+287539	lua-libs-5.4.8-2.fc43.x86_64
+287083	libxmlb-0.3.24-1.fc43.x86_64
+286944	qemu-audio-dbus-10.1.0-7.fc43.x86_64
+286624	python3-h11-0.16.0-5.fc43.noarch
+286198	google-noto-sans-devanagari-vf-fonts-20250901-1.fc43.noarch
+285941	libgexiv2-0.14.6-2.fc43.x86_64
+284320	iw-6.9-5.fc43.x86_64
+283698	xmlsec1-openssl-1.2.41-3.fc43.x86_64
+282382	kdump-utils-1.0.56-2.fc43.x86_64
+282207	uchardet-0.0.8-8.fc43.x86_64
+281891	pcre2-syntax-10.46-1.fc43.noarch
+280732	swtpm-tools-0.10.1-2.fc43.x86_64
+276122	libabw-0.1.3-18.fc43.x86_64
+275534	c-ares-1.34.5-2.fc43.x86_64
+275021	samba-common-libs-4.23.1-1.fc43.x86_64
+274832	rpm-build-libs-6.0.0-1.fc43.x86_64
+274455	perl-URI-5.34-1.fc43.noarch
+273229	fmt-11.2.0-3.fc43.x86_64
+272996	libgcc-15.2.1-2.fc43.x86_64
+272879	libcanberra-0.30-38.fc43.x86_64
+270577	gssproxy-0.9.2-9.fc43.x86_64
+269261	pinentry-1.3.2-1.fc43.x86_64
+268698	libblkid-2.41.1-17.fc43.x86_64
+265600	cifs-utils-7.2-2.fc43.x86_64
+265403	pulseaudio-utils-17.0-7.fc43.x86_64
+264143	libavif-1.3.0-2.fc43.x86_64
+263562	portaudio-19.7.0-2.fc43.x86_64
+261878	exfatprogs-1.2.9-2.fc43.x86_64
+258923	swtpm-selinux-0.10.1-2.fc43.noarch
+257758	teamd-1.32-12.fc43.x86_64
+257594	Box2D-2.4.2-5.fc43.x86_64
+257451	google-crosextra-caladea-fonts-1.002-0.21.20130214.fc43.noarch
+256996	lksctp-tools-1.0.21-1.fc43.x86_64
+256670	pangomm-2.46.4-4.fc43.x86_64
+256031	gnupg2-gpgconf-2.4.8-4.fc43.x86_64
+255710	google-noto-naskh-arabic-vf-fonts-20250901-1.fc43.noarch
+255588	unoconv-0.9.0-17.fc43.noarch
+255001	librepo-1.20.0-4.fc43.x86_64
+254590	atk-2.58.1-1.fc43.x86_64
+253111	kmod-34.2-2.fc43.x86_64
+252404	madan-fonts-2.000-41.fc43.noarch
+250369	libaribcaption-1.1.1-3.fc43.x86_64
+249828	gvnc-1.5.0-3.fc43.x86_64
+249812	libspelling-0.4.9-1.fc43.x86_64
+248678	gvfs-goa-1.58.0-1.fc43.x86_64
+247625	ibus-chewing-2.1.7-1.fc43.x86_64
+247616	langtable-0.0.69-4.fc43.noarch
+246755	python3-cups-2.0.4-7.fc43.x86_64
+245886	libedit-3.1-56.20250104cvs.fc43.x86_64
+244245	libfido2-1.16.0-3.fc43.x86_64
+243445	libpng-1.6.50-2.fc43.x86_64
+242738	libplist-2.6.0-5.fc43.x86_64
+242387	passim-0.1.10-2.fc43.x86_64
+242273	dosfstools-4.2-16.fc43.x86_64
+241790	google-noto-sans-symbols-vf-fonts-20250901-1.fc43.noarch
+241009	nbdkit-server-1.45.8-1.fc43.x86_64
+238307	libportal-0.9.1-2.fc43.x86_64
+237914	google-noto-serif-kannada-vf-fonts-20250901-1.fc43.noarch
+236933	perl-POSIX-2.23-520.fc43.x86_64
+236766	perl-Storable-3.37-521.fc43.x86_64
+236683	google-noto-sans-arabic-vf-fonts-20250901-1.fc43.noarch
+235443	google-noto-sans-telugu-vf-fonts-20250901-1.fc43.noarch
+234979	kexec-tools-2.0.31-3.fc43.x86_64
+234682	libnftnl-1.2.9-2.fc43.x86_64
+233994	bc-1.08.2-2.fc43.x86_64
+233480	gtk-vnc2-1.5.0-3.fc43.x86_64
+231792	cracklib-2.9.11-8.fc43.x86_64
+231644	vpnc-0.5.3^20241114.git11e15a1-3.fc43.x86_64
+231397	python3-humanize-4.12.3-4.fc43.noarch
+231243	sssd-kcm-2.11.1-3.fc43.x86_64
+230312	libseccomp-2.6.0-2.fc43.x86_64
+229729	cairomm1.16-1.18.0-12.fc43.x86_64
+229191	libiscsi-1.20.0-5.fc43.x86_64
+228577	dmidecode-3.6-7.fc43.x86_64
+228424	libvirt-gobject-5.0.0-7.fc43.x86_64
+228223	geocode-glib-3.26.4-14.fc43.x86_64
+227866	NetworkManager-ssh-1.4.1-3.fc43.x86_64
+226776	libgfapi0-11.2-4.fc43.x86_64
+226736	libgfrpc0-11.2-4.fc43.x86_64
+225692	pinfo-0.6.13-9.fc43.x86_64
+224582	qt6-qtserialport-6.9.2-1.fc43.x86_64
+224553	sssd-krb5-common-2.11.1-3.fc43.x86_64
+224516	deltarpm-3.6.5-6.fc43.x86_64
+223681	desktop-file-utils-0.28-2.fc43.x86_64
+223045	xz-libs-5.8.1-2.fc43.x86_64
+222695	ndctl-libs-82-2.fc43.x86_64
+222618	usb_modeswitch-2.6.2-4.fc43.x86_64
+222447	mpdecimal-4.0.1-2.fc43.x86_64
+222294	xkbcomp-1.4.7-4.fc43.x86_64
+221639	apr-util-1.6.3-24.fc43.x86_64
+221145	gstreamer1-plugins-good-qt6-1.26.6-1.fc43.x86_64
+221065	libdisplay-info-0.2.0-4.fc43.x86_64
+220635	acl-2.3.2-4.fc43.x86_64
+219845	pcsc-lite-2.3.3-2.fc43.x86_64
+219694	fuse-2.9.9-24.fc43.x86_64
+218892	libjcat-0.2.5-1.fc43.x86_64
+218657	soundtouch-2.4.0-2.fc43.x86_64
+217908	ipset-libs-7.24-2.fc43.x86_64
+217312	accountsservice-libs-23.13.9-9.fc43.x86_64
+216606	spice-vdagent-0.23.0-1.fc43.x86_64
+215285	python3-distro-1.9.0-10.fc43.noarch
+214732	SDL2_image-2.8.8-2.fc43.x86_64
+214203	ibus-hangul-1.5.5-11.fc43.x86_64
+214157	libcap-2.76-3.fc43.x86_64
+211704	cldr-emoji-annotation-dtd-48~beta1-1.fc43.noarch
+210712	enchant2-2.8.12-2.fc43.x86_64
+210274	libcomps-0.1.23-1.fc43.x86_64
+209110	xdg-user-dirs-gtk-0.11-7.fc43.x86_64
+208095	cairomm-1.14.5-12.fc43.x86_64
+206530	liblangtag-0.6.7-6.fc43.x86_64
+206210	gnupg2-keyboxd-2.4.8-4.fc43.x86_64
+205616	nss-util-3.115.1-1.fc43.x86_64
+205462	xmlsec1-nss-1.2.41-3.fc43.x86_64
+204852	libreport-gtk-2.17.15-9.fc43.x86_64
+204572	polkit-libs-126-6.fc43.x86_64
+204398	psacct-6.6.4-25.fc43.x86_64
+204272	libtextstyle-0.25.1-2.fc43.x86_64
+204266	google-noto-sans-oriya-vf-fonts-20250901-1.fc43.noarch
+203698	libtirpc-1.3.7-0.fc43.x86_64
+203689	rit-meera-new-fonts-1.6.2-4.fc43.noarch
+203537	httpd-tools-2.4.64-3.fc43.x86_64
+203507	rest-0.10.2-1.fc43.x86_64
+203074	bluez-libs-5.84-2.fc43.x86_64
+202933	authselect-1.6.2-1.fc43.x86_64
+202607	libxkbfile-1.1.3-4.fc43.x86_64
+202537	google-noto-sans-gujarati-vf-fonts-20250901-1.fc43.noarch
+201946	samba-common-4.23.1-1.fc43.noarch
+199165	plymouth-theme-spinner-24.004.60-20.fc43.x86_64
+199090	libICE-1.1.2-3.fc43.x86_64
+199050	gstreamer1-plugins-good-qt-1.26.6-1.fc43.x86_64
+198764	libunwind-1.8.1-3.fc43.x86_64
+197765	libselinux-3.9-5.fc43.x86_64
+197313	abattis-cantarell-vf-fonts-0.301-15.fc43.noarch
+196380	gvfs-afp-1.58.0-1.fc43.x86_64
+196375	graphite2-1.3.14-19.fc43.x86_64
+196120	soxr-0.1.3-20.fc43.x86_64
+195905	libXmu-1.2.1-4.fc43.x86_64
+195520	libavdevice-free-7.1.2-2.fc43.x86_64
+195482	osinfo-db-tools-1.12.0-4.fc43.x86_64
+195408	braille-printer-app-2.0~b0^386eea385f-9.fc43.x86_64
+194851	fribidi-1.0.16-3.fc43.x86_64
+193563	google-noto-serif-oriya-vf-fonts-20250901-1.fc43.noarch
+192599	libgxps-0.3.2-11.fc43.x86_64
+189457	python3-augeas-1.2.0-6.fc43.x86_64
+189367	mtr-0.95-13.fc43.x86_64
+189187	hdparm-9.65-9.fc43.x86_64
+188725	lrzsz-0.12.20-75.fc43.x86_64
+185739	libsane-hpaio-3.25.6-1.fc43.x86_64
+185433	google-noto-sans-kannada-vf-fonts-20250901-1.fc43.noarch
+185421	libzmf-0.0.2-41.fc43.x86_64
+184794	libsmartcols-2.41.1-17.fc43.x86_64
+184331	perl-PathTools-3.94-520.fc43.x86_64
+183634	python3-rpm-6.0.0-1.fc43.x86_64
+183187	lzo-2.10-15.fc43.x86_64
+183112	libcdio-paranoia-10.2+2.0.2-5.fc43.x86_64
+183046	cups-client-2.4.14-2.fc43.x86_64
+180515	libtasn1-4.20.0-2.fc43.x86_64
+180500	google-noto-serif-tamil-vf-fonts-20250901-1.fc43.noarch
+179120	libshout-2.4.6-9.fc43.x86_64
+179005	libmpeg2-0.5.1-32.fc43.x86_64
+178744	sane-airscan-0.99.36-1.fc43.x86_64
+177351	NetworkManager-ssh-gnome-1.4.1-3.fc43.x86_64
+176877	whois-5.6.4-1.fc43.x86_64
+176690	attr-2.5.2-6.fc43.x86_64
+176323	plymouth-graphics-libs-24.004.60-20.fc43.x86_64
+176174	libreoffice-langpack-en-25.8.1.1-0.2.fc43.x86_64
+175690	avahi-libs-0.9~rc2-6.fc43.x86_64
+175372	libusb1-1.0.29-4.fc43.x86_64
+175342	uriparser-0.9.9-1.fc43.x86_64
+174919	liblc3-1.1.3-5.fc43.x86_64
+174894	upower-libs-1.90.10-1.fc43.x86_64
+174795	fwupd-efi-1.8-1.fc43.x86_64
+174368	google-noto-serif-gujarati-vf-fonts-20250901-1.fc43.noarch
+173373	pipewire-gstreamer-1.4.8-2.fc43.x86_64
+173366	libwpg-0.3.4-6.fc43.x86_64
+172232	composefs-1.0.8-3.fc43.x86_64
+172219	libnfsidmap-2.8.4-0.fc43.x86_64
+172039	google-noto-serif-khmer-vf-fonts-20250901-1.fc43.noarch
+171528	libsmbclient-4.23.1-1.fc43.x86_64
+171129	geoclue2-libs-2.7.2-3.fc43.x86_64
+170651	xdg-user-dirs-0.18-11.fc43.x86_64
+170269	conmon-2.1.13-2.fc43.x86_64
+169884	gvfs-mtp-1.58.0-1.fc43.x86_64
+169731	kdump-anaconda-addon-006-15.20220714git7ca2d3e.fc43.noarch
+169448	twolame-libs-0.4.0-8.fc43.x86_64
+169182	libdecor-0.2.3-6.fc43.x86_64
+168904	jbig2dec-libs-0.20-7.fc43.x86_64
+168740	qrencode-libs-4.1.1-11.fc43.x86_64
+168449	google-noto-sans-bengali-vf-fonts-20250901-1.fc43.noarch
+168436	pkcs11-helper-1.30.0-4.fc43.x86_64
+168317	libXft-2.3.8-9.fc43.x86_64
+167877	libiptcdata-1.0.5-23.fc43.x86_64
+167724	libassuan-2.5.7-4.fc43.x86_64
+167625	perl-Pod-Perldoc-3.28.01-521.fc43.noarch
+167364	iscsi-initiator-utils-iscsiuio-6.2.1.11-0.git4b3e853.fc43.2.x86_64
+166886	kasumi-unicode-2.5-49.fc43.x86_64
+166374	minizip-ng-compat-4.0.10-2.fc43.x86_64
+166216	perl-File-Temp-0.231.100-520.fc43.noarch
+166137	libxdp-1.5.6-1.fc43.x86_64
+166100	libnghttp2-1.66.0-2.fc43.x86_64
+165903	gvfs-gphoto2-1.58.0-1.fc43.x86_64
+165871	libgusb-0.4.9-4.fc43.x86_64
+165229	lz4-libs-1.10.0-3.fc43.x86_64
+164428	libmpc-1.3.1-8.fc43.x86_64
+164210	abrt-dbus-2.17.7-1.fc43.x86_64
+162637	libraw1394-2.1.2-24.fc43.x86_64
+162262	mcelog-175-13.fc43.x86_64
+162219	graphene-1.10.8-2.fc43.x86_64
+161766	pipewire-alsa-1.4.8-2.fc43.x86_64
+161013	librist-0.2.7-10.fc43.x86_64
+160738	zlib-ng-2.2.5-2.fc43.x86_64
+160711	nss-mdns-0.15.1-27.fc43.x86_64
+160522	iio-sensor-proxy-3.8-1.fc43.x86_64
+160048	google-noto-sans-canadian-aboriginal-vf-fonts-20250901-1.fc43.noarch
+159862	libdvdread-6.1.3-10.fc43.x86_64
+159290	libwmf-lite-0.2.13-8.fc43.x86_64
+158905	NetworkManager-openconnect-gnome-1.2.10-9.fc43.x86_64
+158100	perl-HTTP-Tiny-0.090-521.fc43.noarch
+157555	vo-amrwbenc-0.1.3-23.fc43.x86_64
+157434	gvfs-afc-1.58.0-1.fc43.x86_64
+156469	libslirp-4.9.1-2.fc43.x86_64
+155432	qadwaitadecorations-qt5-0.1.6-9.fc43.x86_64
+154888	libini_config-1.3.1-59.fc43.x86_64
+154650	gnome-autoar-0.4.5-3.fc43.x86_64
+154481	libpagemaker-0.0.4-27.fc43.x86_64
+153373	msgraph-0.3.3-3.fc43.x86_64
+152712	usbmuxd-1.1.1^20240915git0b1b233-6.fc43.x86_64
+152496	logrotate-3.22.0-4.fc43.x86_64
+151907	libXpm-3.5.17-6.fc43.x86_64
+151806	paps-0.8.0-14.fc43.x86_64
+151548	tecla-49.0-1.fc43.x86_64
+150930	keyutils-1.6.3-6.fc43.x86_64
+150922	perl-IO-1.55-520.fc43.x86_64
+150882	libswresample-free-7.1.2-2.fc43.x86_64
+150407	crypto-policies-20250714-5.gitcd6043a.fc43.noarch
+150035	pipewire-plugin-libcamera-1.4.8-2.fc43.x86_64
+149980	gssdp-1.6.4-2.fc43.x86_64
+149444	libjose-14-5.fc43.x86_64
+149163	NetworkManager-vpnc-gnome-1.4.0-4.fc43.x86_64
+148570	libpipeline-1.5.8-3.fc43.x86_64
+148405	perl-Scalar-List-Utils-1.70-1.fc43.x86_64
+148250	libglvnd-opengl-1.7.0-8.fc43.x86_64
+148023	wl-clipboard-2.2.1-5.fc43.x86_64
+147953	perl-Getopt-Long-2.58-520.fc43.noarch
+147130	libmspack-0.10.1-0.15.alpha.fc43.x86_64
+145648	composefs-libs-1.0.8-3.fc43.x86_64
+145619	switcheroo-control-3.0-1.fc43.x86_64
+145406	librdmacm-58.0-4.fc43.x86_64
+144141	libphodav-3.0-12.fc43.x86_64
+143808	qatzip-libs-1.3.1-2.fc43.x86_64
+143058	libnetfilter_conntrack-1.0.9-9.fc43.x86_64
+142715	python3-libcomps-0.1.23-1.fc43.x86_64
+142491	libunibreak-6.1-4.fc43.x86_64
+141431	rtkit-0.11-69.fc43.x86_64
+140920	zlib-ng-compat-2.2.5-2.fc43.x86_64
+140294	NetworkManager-wwan-1.54.0-2.fc43.x86_64
+140257	cxl-libs-82-2.fc43.x86_64
+139110	libzip-1.11.4-2.fc43.x86_64
+138358	kmod-libs-34.2-2.fc43.x86_64
+138236	serd-0.32.4-2.fc43.x86_64
+138226	bubblewrap-0.11.0-2.fc43.x86_64
+137875	libyaml-0.2.5-17.fc43.x86_64
+137599	gcr-4.4.0.1-2.fc43.x86_64
+137492	usb_modeswitch-data-20191128-14.fc43.noarch
+136951	mod_lua-2.4.64-3.fc43.x86_64
+136354	mpage-2.5.7-23.fc43.x86_64
+136249	google-noto-sans-cherokee-vf-fonts-20250901-1.fc43.noarch
+136036	libsss_certmap-2.11.1-3.fc43.x86_64
+135954	popt-1.19-9.fc43.x86_64
+135849	boost-thread-1.83.0-17.fc43.x86_64
+135841	libvirt-glib-5.0.0-7.fc43.x86_64
+135633	libnet-1.3-6.fc43.x86_64
+135460	swtpm-libs-0.10.1-2.fc43.x86_64
+135417	whois-nls-5.6.4-1.fc43.noarch
+134590	libavc1394-0.5.4-26.fc43.x86_64
+134363	fedora-gpg-keys-43-1.noarch
+134143	fuse-overlayfs-1.13-4.fc43.x86_64
+133156	poppler-cpp-25.07.0-2.fc43.x86_64
+132986	gdbm-libs-1.23-10.fc43.x86_64
+132773	fuse3-3.16.2-5.fc42.x86_64
+131700	containers-common-0.64.2-1.fc43.noarch
+131564	speex-1.2.0-20.fc43.x86_64
+131471	libao-1.2.0-30.fc43.x86_64
+131339	libreport-plugin-bugzilla-2.17.15-9.fc43.x86_64
+130617	python3-pyaudio-0.2.13-10.fc43.x86_64
+129879	pam-libs-1.7.1-3.fc43.x86_64
+129529	python3-blockdev-3.4.0-1.fc43.x86_64
+129437	libtommath-1.3.1~rc1-6.fc43.x86_64
+129374	scrub-2.6.1-11.fc43.x86_64
+128921	gnome-browser-connector-42.1-13.fc43.x86_64
+128340	libsrtp-2.6.0-3.fc43.x86_64
+128296	fwupd-plugin-modem-manager-2.0.16-1.fc43.x86_64
+127377	clevis-21-12.fc43.x86_64
+127297	libcloudproviders-0.3.6-2.fc43.x86_64
+126568	libnotify-0.8.7-1.fc43.x86_64
+126160	iwlegacy-firmware-20251021-1.fc43.noarch
+125934	libdeflate-1.24-2.fc43.x86_64
+124552	woff2-1.0.2-23.fc43.x86_64
+123810	malcontent-control-0.13.0-3.fc43.x86_64
+123645	python3-libmount-2.41.1-17.fc43.x86_64
+123141	perl-Socket-2.040-2.fc43.x86_64
+122852	memstrack-0.2.5-7.fc43.x86_64
+121611	libimobiledevice-glue-1.3.1-3.fc43.x86_64
+121490	perl-interpreter-5.42.0-520.fc43.x86_64
+121416	google-noto-sans-khmer-vf-fonts-20250901-1.fc43.noarch
+120836	python3-six-1.17.0-7.fc43.noarch
+119332	malcontent-ui-libs-0.13.0-3.fc43.x86_64
+118860	libdvdnav-6.1.1-11.fc43.x86_64
+118498	uresourced-0.5.4-4.fc43.x86_64
+118407	perl-Data-Dumper-2.191-521.fc43.x86_64
+118131	lilv-libs-0.24.26-7.fc43.x86_64
+118090	libei-1.5.0-1.fc43.x86_64
+118036	libeis-1.5.0-1.fc43.x86_64
+117998	libcacard-2.8.1-12.fc43.x86_64
+117585	qt5-qtx11extras-5.15.17-2.fc43.x86_64
+117173	libatasmart-0.19-31.fc43.x86_64
+116606	python3-satyr-0.43-9.fc43.x86_64
+116246	cdparanoia-libs-10.2-48.fc43.x86_64
+116175	jbigkit-libs-2.1-32.fc43.x86_64
+116102	jose-14-5.fc43.x86_64
+115966	libipt-2.1.2-3.fc43.x86_64
+115529	dracut-network-107-8.fc43.x86_64
+114886	tree-2.2.1-2.fc43.x86_64
+114798	giflib-5.2.2-8.fc43.x86_64
+113550	os-prober-1.81-10.fc43.x86_64
+113244	audit-rules-4.1.1-2.fc43.x86_64
+113100	libvirt-daemon-log-11.6.0-1.fc43.x86_64
+113044	hidapi-0.15.0-2.fc43.x86_64
+111270	malcontent-libs-0.13.0-3.fc43.x86_64
+111200	libblockdev-fs-3.4.0-1.fc43.x86_64
+110736	python3-xkbregistry-0.3-8.fc43.x86_64
+110689	sscg-3.0.8-2.fc43.x86_64
+110619	rpcbind-1.2.8-0.fc43.x86_64
+110001	liburing-2.9-2.fc43.x86_64
+108673	usbredir-0.15.0-2.fc43.x86_64
+108620	libteam-1.32-12.fc43.x86_64
+108559	libwacom-2.16.1-2.fc43.x86_64
+108492	hiredis-1.2.0-7.fc43.x86_64
+107972	lmdb-libs-0.9.33-4.fc43.x86_64
+107746	libev-4.33-14.fc43.x86_64
+106485	traceroute-2.1.6-3.fc43.x86_64
+106371	hyphen-en-2.8.8-27.fc43.noarch
+105301	libmd-1.1.0-8.fc43.x86_64
+104740	libproxy-0.5.8-3.fc43.x86_64
+104489	python3-pysocks-1.7.1-31.fc43.noarch
+103895	libtevent-0.17.1-3.fc43.x86_64
+103624	liblqr-1-0.4.2-28.fc43.x86_64
+103531	NetworkManager-bluetooth-1.54.0-2.fc43.x86_64
+103422	libSM-1.2.5-3.fc43.x86_64
+103086	libblockdev-lvm-dbus-3.4.0-1.fc43.x86_64
+102913	libtdb-1.4.14-3.fc43.x86_64
+102844	gvfs-smb-1.58.0-1.fc43.x86_64
+102755	perl-IO-Socket-IP-0.43-521.fc43.noarch
+102652	file-5.46-8.fc43.x86_64
+102587	sudo-python-plugin-1.9.17-5.p1.fc43.x86_64
+102504	tzdata-java-2025b-3.fc43.noarch
+102092	libvirt-daemon-lock-11.6.0-1.fc43.x86_64
+101745	pciutils-libs-3.14.0-2.fc43.x86_64
+101733	dbus-tools-1.16.0-4.fc43.x86_64
+101549	flatpak-session-helper-1.16.1-1.fc43.x86_64
+101057	mokutil-0.7.2-2.fc43.x86_64
+100974	lzop-1.04-17.fc43.x86_64
+100904	libcollection-0.7.0-59.fc43.x86_64
+100459	avahi-tools-0.9~rc2-6.fc43.x86_64
+100282	libglvnd-gles-1.7.0-8.fc43.x86_64
+100217	libreport-plugin-reportuploader-2.17.15-9.fc43.x86_64
+99974	double-conversion-3.3.1-4.fc43.x86_64
+99871	perl-Term-ANSIColor-5.01-521.fc43.noarch
+99389	zchunk-libs-1.5.1-3.fc43.x86_64
+99040	wsdd-0.8-5.fc43.noarch
+98212	gnome-bluetooth-47.1-3.fc43.x86_64
+97621	bzip2-1.0.8-21.fc43.x86_64
+97618	libpasswdqc-2.0.3-8.fc43.x86_64
+97542	iptstate-2.2.7-10.fc43.x86_64
+97061	libkcapi-1.5.0-6.fc43.x86_64
+96997	efibootmgr-18-10.fc43.x86_64
+96592	policycoreutils-python-utils-3.9-5.fc43.noarch
+96570	abrt-gui-2.17.7-1.fc43.x86_64
+96520	pam_afs_session-2.6-24.fc43.x86_64
+96430	startup-notification-0.12-32.fc43.x86_64
+95658	libsbc-2.0-7.fc43.x86_64
+95190	fedora-bookmarks-28-34.fc43.noarch
+94367	vid.stab-1.1.1-6.fc43.x86_64
+94318	sane-backends-libs-1.4.0-4.fc43.x86_64
+94125	python3-linux-procfs-0.7.3-11.fc43.noarch
+93624	ilbc-3.0.4-17.fc43.x86_64
+92764	boost-iostreams-1.83.0-17.fc43.x86_64
+92705	xdg-dbus-proxy-0.1.6-3.fc43.x86_64
+92677	libsigc++20-2.12.1-6.fc43.x86_64
+92314	xxhash-libs-0.8.3-3.fc43.x86_64
+92125	libXext-1.3.6-4.fc43.x86_64
+91974	libspectre-0.2.12-10.fc43.x86_64
+91773	librabbitmq-0.15.0-3.fc43.x86_64
+91772	stoken-libs-0.92-14.fc43.x86_64
+91605	polkit-pkla-compat-0.1-31.fc43.x86_64
+91511	libsigc++30-3.6.0-6.fc43.x86_64
+91205	jansson-2.14-3.fc43.x86_64
+91144	speech-dispatcher-libs-0.12.1-5.fc43.x86_64
+90979	pinentry-gnome3-1.3.2-1.fc43.x86_64
+90593	pkgconf-2.3.0-3.fc43.x86_64
+90349	ImageMagick-7.1.1.47-3.fc43.x86_64
+89394	libbytesize-2.11-104.fc43.x86_64
+89292	qemu-device-display-qxl-10.1.0-7.fc43.x86_64
+89175	kpartx-0.11.1-2.fc43.x86_64
+89132	abrt-addon-kerneloops-2.17.7-1.fc43.x86_64
+88823	daxctl-libs-82-2.fc43.x86_64
+88765	libpskc-2.6.12-3.fc43.x86_64
+88452	qemu-ui-gtk-10.1.0-7.fc43.x86_64
+88389	perl-Pod-Usage-2.05-520.fc43.noarch
+88211	liba52-0.7.4-51.fc43.x86_64
+88104	gnome-shell-extension-window-list-49.0-2.fc43.noarch
+88071	mailcap-2.1.54-9.fc43.noarch
+88055	libiec61883-1.2.0-38.fc43.x86_64
+88041	libndp-1.9-4.fc43.x86_64
+87936	libjaylink-0.3.0-9.fc43.x86_64
+87919	libieee1284-0.2.11-47.fc43.x86_64
+87847	libcue-2.3.0-12.fc43.x86_64
+87830	lm_sensors-libs-3.6.0-23.fc43.x86_64
+87664	libpostproc-free-7.1.2-2.fc43.x86_64
+87382	libftdi-1.5-21.fc43.x86_64
+87234	google-noto-sans-syriac-vf-fonts-20250901-1.fc43.noarch
+87178	criu-libs-4.1.1-2.fc43.x86_64
+86823	libmaxminddb-1.12.2-4.fc43.x86_64
+86336	urw-base35-d050000l-fonts-20200910-26.fc43.noarch
+85953	elfutils-debuginfod-client-0.193-3.fc43.x86_64
+85783	libgudev-238-8.fc43.x86_64
+85597	libffi-3.5.1-2.fc43.x86_64
+85588	libmediaart-1.9.7-2.fc43.x86_64
+85504	which-2.23-3.fc43.x86_64
+85134	aribb24-1.0.3^20160216git5e9be27-3.fc43.x86_64
+84706	json-c-0.18-7.fc43.x86_64
+84700	nautilus-extensions-49.1-1.fc43.x86_64
+84580	time-1.9-27.fc43.x86_64
+84476	libdnf5-plugin-expired-pgp-keys-5.2.17.0-2.fc43.x86_64
+84166	libsss_nss_idmap-2.11.1-3.fc43.x86_64
+84128	yajl-2.1.0-38.fc43.x86_64
+83995	libevdev-1.13.4-2.fc43.x86_64
+83613	sord-0.16.18-2.fc43.x86_64
+83179	xcb-util-wm-0.4.2-8.fc43.x86_64
+82549	libXi-1.8.2-3.fc43.x86_64
+82524	bzip2-libs-1.0.8-21.fc43.x86_64
+82405	python3-ptyprocess-0.7.0-14.fc43.noarch
+81699	systemd-sysusers-258-1.fc43.x86_64
+81668	abrt-tui-2.17.7-1.fc43.noarch
+80791	fedora-third-party-0.10-15.fc43.noarch
+80500	google-noto-sans-tamil-vf-fonts-20250901-1.fc43.noarch
+80424	libwayland-server-1.24.0-1.fc43.x86_64
+80280	xml-common-0.6.3-67.fc43.noarch
+80070	libXdmcp-1.1.5-4.fc43.x86_64
+79993	libpkgconf-2.3.0-3.fc43.x86_64
+79663	libcbor-0.12.0-6.fc43.x86_64
+79228	gsound-1.0.3-11.fc43.x86_64
+79069	libeot-0.01-34.fc43.x86_64
+78959	libqrtr-glib-1.2.2-8.fc43.x86_64
+78589	perl-Error-0.17030-2.fc43.noarch
+78272	libpsl-0.21.5-6.fc43.x86_64
+78231	libreport-plugin-ureport-2.17.15-9.fc43.x86_64
+78146	libblockdev-lvm-3.4.0-1.fc43.x86_64
+77481	fpaste-0.5.0.0-3.fc43.noarch
+77368	google-noto-serif-georgian-vf-fonts-20250901-1.fc43.noarch
+77029	libusbmuxd-2.1.0-4.fc43.x86_64
+76574	gettext-envsubst-0.25.1-2.fc43.x86_64
+76559	libmysofa-1.3.3-3.fc43.x86_64
+76432	gnome-app-list-3.0-2.fc43.noarch
+75989	libldac-2.0.2.3-18.fc43.x86_64
+75638	libsss_idmap-2.11.1-3.fc43.x86_64
+75622	ipcalc-1.0.3-12.fc43.x86_64
+75505	passwdqc-utils-2.0.3-8.fc43.x86_64
+74716	clevis-luks-21-12.fc43.x86_64
+74690	libXau-1.0.12-3.fc43.x86_64
+74365	ipset-7.24-2.fc43.x86_64
+74274	container-selinux-2.242.0-1.fc43.noarch
+74107	hicolor-icon-theme-0.18-2.fc43.noarch
+73730	plymouth-plugin-two-step-24.004.60-20.fc43.x86_64
+73557	snappy-1.2.2-2.fc43.x86_64
+73418	python3-abrt-2.17.7-1.fc43.x86_64
+73310	perl-overload-1.40-520.fc43.noarch
+72887	libss-1.47.3-2.fc43.x86_64
+72426	libcanberra-gtk3-0.30-38.fc43.x86_64
+72134	lockdev-1.0.4-0.53.20111007git.fc43.x86_64
+71793	libtool-ltdl-2.5.4-7.fc43.x86_64
+71744	passim-libs-0.1.10-2.fc43.x86_64
+71515	qemu-device-display-virtio-gpu-10.1.0-7.fc43.x86_64
+70762	publicsuffix-list-dafsa-20250616-2.fc43.noarch
+70605	perl-Time-Local-1.350-520.fc43.noarch
+70603	libcap-ng-0.8.5-8.fc43.x86_64
+70511	linux-atm-libs-2.5.1-45.fc43.x86_64
+70477	qatlib-service-25.08.0-2.fc43.x86_64
+70446	abrt-libs-2.17.7-1.fc43.x86_64
+70312	python3-pid-3.0.4-4.fc43.noarch
+70308	libwbclient-4.23.1-1.fc43.x86_64
+69978	gstreamer1-plugin-openh264-1.26.6-2.fc43.x86_64
+69973	qemu-device-usb-redirect-10.1.0-7.fc43.x86_64
+69896	livesys-scripts-0.8.0-3.fc43.noarch
+69888	virt-what-1.27-4.fc43.x86_64
+69547	qemu-ui-spice-core-10.1.0-7.fc43.x86_64
+69264	libblockdev-crypto-3.4.0-1.fc43.x86_64
+68545	libfontenc-1.1.8-4.fc43.x86_64
+68316	gupnp-igd-1.6.0-7.fc43.x86_64
+67542	low-memory-monitor-2.1-13.fc43.x86_64
+67508	libudfread-1.1.2-12.fc43.x86_64
+67107	python3-crypt-r-3.13.1-8.fc43.x86_64
+66823	gsm-1.0.23-1.fc43.x86_64
+66438	libeconf-0.7.9-2.fc43.x86_64
+66424	urw-base35-standard-symbols-ps-fonts-20200910-26.fc43.noarch
+66236	libglvnd-egl-1.7.0-8.fc43.x86_64
+66097	libchromaprint-1.5.1-25.fc43.x86_64
+65912	perl-Git-2.51.0-2.fc43.noarch
+65855	libdaemon-0.14-32.fc43.x86_64
+65784	gstreamer1-plugins-good-gtk-1.26.6-1.fc43.x86_64
+65589	libtalloc-2.4.3-4.fc43.x86_64
+65529	libbs2b-3.1.0-36.fc43.x86_64
+65515	perl-TermReadKey-2.38-26.fc43.x86_64
+65438	cjson-1.7.18-3.fc43.x86_64
+65136	NetworkManager-ppp-1.54.0-2.fc43.x86_64
+65045	perl-File-Path-2.18-520.fc43.noarch
+64633	libcom_err-1.47.3-2.fc43.x86_64
+64422	libcap-ng-python3-0.8.5-8.fc43.x86_64
+64209	evince-djvu-48.1-1.fc43.x86_64
+63753	nbdkit-curl-plugin-1.45.8-1.fc43.x86_64
+63712	alternatives-1.33-2.fc43.x86_64
+63707	gnome-epub-thumbnailer-1.8-3.fc43.x86_64
+63645	gtk-update-icon-cache-3.24.51-2.fc43.x86_64
+63528	libwayland-client-1.24.0-1.fc43.x86_64
+63520	libfdt-1.7.2-7.fc43.x86_64
+63410	qemu-device-uefi-vars-10.1.0-7.fc43.x86_64
+63335	isomd5sum-1.2.5-5.fc43.x86_64
+63090	abrt-addon-xorg-2.17.7-1.fc43.x86_64
+63028	libijs-0.35-25.fc43.x86_64
+62822	libdhash-0.5.0-59.fc43.x86_64
+62808	libpath_utils-0.2.1-59.fc43.x86_64
+62372	gnutls-dane-3.8.10-3.fc43.x86_64
+62147	ima-evm-utils-libs-1.6.2-6.fc43.x86_64
+62139	pcaudiolib-1.1-18.fc43.x86_64
+61333	pcsc-lite-libs-2.3.3-2.fc43.x86_64
+61120	perl-Digest-MD5-2.59-520.fc43.x86_64
+60642	speech-dispatcher-espeak-ng-0.12.1-5.fc43.x86_64
+60107	zix-0.6.2-2.fc43.x86_64
+59971	gnome-shell-extension-background-logo-49.0-2.fc43.noarch
+59782	dotconf-1.4.1-5.fc43.x86_64
+59254	libnsl2-2.0.1-4.fc43.x86_64
+58996	totem-video-thumbnailer-43.2-6.fc43.x86_64
+58932	device-mapper-event-libs-1.02.208-2.fc43.x86_64
+58833	mod_dnssd-0.6-35.fc43.x86_64
+58760	google-noto-sans-georgian-vf-fonts-20250901-1.fc43.noarch
+58310	numactl-libs-2.0.19-3.fc43.x86_64
+57965	httpd-2.4.64-3.fc43.x86_64
+57740	git-2.51.0-2.fc43.x86_64
+57160	numad-0.5-47.20150602git.fc43.x86_64
+56962	b43-fwcutter-019-39.fc43.x86_64
+56846	libasyncns-0.8-31.fc43.x86_64
+56340	liblouisutdml-utils-2.12.0-7.fc43.x86_64
+56134	device-mapper-event-1.02.208-2.fc43.x86_64
+55984	xprop-1.2.8-4.fc43.x86_64
+55579	keyutils-libs-1.6.3-6.fc43.x86_64
+55557	perl-Exporter-5.79-520.fc43.noarch
+55494	spice-webdavd-3.0-12.fc43.x86_64
+55308	google-noto-serif-gurmukhi-vf-fonts-20250901-1.fc43.noarch
+55121	libdatrie-0.2.13-12.fc43.x86_64
+55079	libsss_sudo-2.11.1-3.fc43.x86_64
+54941	python3-pam-2.0.2-16.fc43.noarch
+54753	libreport-fedora-2.17.15-9.fc43.x86_64
+54720	libXcursor-1.2.3-3.fc43.x86_64
+54582	unbound-anchor-1.23.1-3.fc43.x86_64
+54494	libref_array-0.1.5-59.fc43.x86_64
+54481	swtpm-0.10.1-2.fc43.x86_64
+54380	libbasicobjects-0.1.1-59.fc43.x86_64
+53818	libreport-web-2.17.15-9.fc43.x86_64
+53701	python3-bytesize-2.11-104.fc43.x86_64
+53328	libgfxdr0-11.2-4.fc43.x86_64
+53302	NetworkManager-team-1.54.0-2.fc43.x86_64
+53022	xmlrpc-c-client-1.60.04-4.fc43.x86_64
+53012	libXrandr-1.5.4-6.fc43.x86_64
+52856	vte-profile-0.82.1-1.fc43.x86_64
+52820	hyphen-2.8.8-27.fc43.x86_64
+52764	papers-previewer-49.1-2.fc43.x86_64
+52645	slitherer-0~git20250617.1e00f77-2.fc43.x86_64
+52590	libblockdev-smartmontools-3.4.0-1.fc43.x86_64
+52391	speech-dispatcher-utils-0.12.1-5.fc43.x86_64
+52307	libmnl-1.0.5-8.fc43.x86_64
+51964	fstrm-0.6.1-13.fc43.x86_64
+51697	qemu-block-iscsi-10.1.0-7.fc43.x86_64
+51575	shadow-utils-subid-4.18.0-3.fc43.x86_64
+51315	libnfnetlink-1.0.1-31.fc43.x86_64
+51082	gvfs-fuse-1.58.0-1.fc43.x86_64
+51016	protobuf-c-1.5.1-2.fc43.x86_64
+50886	system-config-printer-udev-1.5.18-16.fc43.x86_64
+50787	npth-1.8-3.fc43.x86_64
+50689	libutempter-1.2.1-19.fc43.x86_64
+50211	libargon2-20190702-8.fc43.x86_64
+49964	perl-Fcntl-1.20-520.fc43.x86_64
+49917	libpaper-2.1.1-9.fc43.x86_64
+49717	libaio-0.3.111-22.fc43.x86_64
+49636	google-noto-sans-gurmukhi-vf-fonts-20250901-1.fc43.noarch
+49344	avahi-gobject-0.9~rc2-6.fc43.x86_64
+49288	ntfs-3g-system-compression-1.0-19.fc43.x86_64
+49256	ibus-gtk3-1.5.33~rc2-2.fc43.x86_64
+49242	bluez-cups-5.84-2.fc43.x86_64
+49155	ibus-gtk4-1.5.33~rc2-2.fc43.x86_64
+48850	libreport-plugin-logger-2.17.15-9.fc43.x86_64
+48745	qemu-device-usb-host-10.1.0-7.fc43.x86_64
+48670	cyrus-sasl-plain-2.1.28-33.fc43.x86_64
+48333	plymouth-plugin-label-24.004.60-20.fc43.x86_64
+48218	gvncpulse-1.5.0-3.fc43.x86_64
+47692	perl-Carp-1.54-520.fc43.noarch
+47374	qemu-device-display-virtio-gpu-gl-10.1.0-7.fc43.x86_64
+47300	python3-jsonschema-specifications-2024.10.1-6.fc43.noarch
+47151	libXrender-0.9.12-3.fc43.x86_64
+46743	grubby-8.40-85.fc43.x86_64
+46710	libogg-1.3.6-1.fc43.x86_64
+46324	libluksmeta-9-25.fc43.x86_64
+46156	cups-filters-driverless-2.0.1-9.fc43.x86_64
+45930	cockpit-ws-selinux-348-1.fc43.x86_64
+45828	qemu-ui-sdl-10.1.0-7.fc43.x86_64
+45725	sratom-0.6.18-2.fc43.x86_64
+45668	qemu-audio-pipewire-10.1.0-7.fc43.x86_64
+45633	google-noto-serif-lao-vf-fonts-20250901-1.fc43.noarch
+45539	libpciaccess-0.16-16.fc43.x86_64
+45472	qemu-user-static-10.1.0-7.fc43.x86_64
+44784	python3-nftables-1.1.3-5.fc43.noarch
+44638	libblockdev-utils-3.4.0-1.fc43.x86_64
+44592	gnome-software-fedora-langpacks-49.0-2.fc43.x86_64
+44460	libblockdev-part-3.4.0-1.fc43.x86_64
+44460	libblockdev-nvme-3.4.0-1.fc43.x86_64
+44426	python3-louis-3.33.0-6.fc43.noarch
+43583	sshpass-1.09-11.fc43.x86_64
+43551	qemu-block-ssh-10.1.0-7.fc43.x86_64
+43220	google-noto-serif-thai-vf-fonts-20250901-1.fc43.noarch
+43070	libb2-0.98.1-14.fc43.x86_64
+43048	perl-MIME-Base64-3.16-520.fc43.x86_64
+42880	python3-requests-ftp-0.3.1-42.fc43.noarch
+42686	nbdkit-ssh-plugin-1.45.8-1.fc43.x86_64
+42605	sssd-nfs-idmap-2.11.1-3.fc43.x86_64
+42557	perl-mro-1.29-520.fc43.x86_64
+42399	hostname-3.25-3.fc43.x86_64
+41927	qemu-block-rbd-10.1.0-7.fc43.x86_64
+41473	dracut-live-107-8.fc43.x86_64
+41426	libXcomposite-0.4.6-6.fc43.x86_64
+41126	google-noto-sans-nko-fonts-20250901-1.fc43.noarch
+41120	cyrus-sasl-gssapi-2.1.28-33.fc43.x86_64
+40969	gvfs-archive-1.58.0-1.fc43.x86_64
+40958	abrt-plugin-bodhi-2.17.7-1.fc43.x86_64
+40940	libvirt-daemon-driver-storage-rbd-11.6.0-1.fc43.x86_64
+40894	NetworkManager-adsl-1.54.0-2.fc43.x86_64
+40786	libreport-plugin-kerneloops-2.17.15-9.fc43.x86_64
+40694	rpm-sign-libs-6.0.0-1.fc43.x86_64
+40585	libXdamage-1.1.6-6.fc43.x86_64
+40583	qemu-ui-curses-10.1.0-7.fc43.x86_64
+40313	dnf-data-4.23.0-6.fc43.noarch
+40280	mkpasswd-5.6.4-1.fc43.x86_64
+40256	libebur128-1.2.6-14.fc43.x86_64
+40222	libblockdev-smart-3.4.0-1.fc43.x86_64
+40106	noopenh264-2.6.0-2.fc43.x86_64
+39271	editorconfig-libs-0.12.9-4.fc43.x86_64
+39135	vpnc-script-20230907-6.git5b9e7e4c.fc43.noarch
+39086	cifs-utils-info-7.2-2.fc43.x86_64
+38572	qemu-device-display-virtio-gpu-rutabaga-10.1.0-7.fc43.x86_64
+38541	iniparser-4.2.6-3.fc43.x86_64
+38385	boost-chrono-1.83.0-17.fc43.x86_64
+38280	urw-base35-fonts-common-20200910-26.fc43.noarch
+38253	libuuid-2.41.1-17.fc43.x86_64
+38200	libwayland-cursor-1.24.0-1.fc43.x86_64
+38065	abrt-addon-vmcore-2.17.7-1.fc43.x86_64
+37810	libreport-cli-2.17.15-9.fc43.x86_64
+37578	libatomic-15.2.1-2.fc43.x86_64
+37371	mutter-common-49.1-1.fc43.noarch
+37135	qemu-ui-opengl-10.1.0-7.fc43.x86_64
+37098	hypervkvpd-6.10-2.fc43.x86_64
+36983	inih-cpp-62-1.fc43.x86_64
+36945	qemu-block-blkio-10.1.0-7.fc43.x86_64
+36786	libacl-2.3.2-4.fc43.x86_64
+36627	fwupd-plugin-flashrom-2.0.16-1.fc43.x86_64
+36418	libxkbcommon-x11-1.11.0-1.fc43.x86_64
+36182	python3-sniffio-1.3.1-8.fc43.noarch
+36178	perl-Digest-1.20-520.fc43.noarch
+36162	libvirt-daemon-driver-storage-gluster-11.6.0-1.fc43.x86_64
+35897	PackageKit-command-not-found-1.3.1-6.fc43.x86_64
+35648	google-noto-sans-lao-vf-fonts-20250901-1.fc43.noarch
+34682	liblastlog2-2.41.1-17.fc43.x86_64
+34596	google-noto-serif-armenian-vf-fonts-20250901-1.fc43.noarch
+34527	google-noto-sans-armenian-vf-fonts-20250901-1.fc43.noarch
+34330	libkcapi-hasher-1.5.0-6.fc43.x86_64
+34296	libXtst-1.2.5-3.fc43.x86_64
+34030	smartmontools-selinux-7.5-4.fc43.noarch
+33856	google-noto-sans-thai-vf-fonts-20250901-1.fc43.noarch
+33802	liboeffis-1.5.0-1.fc43.x86_64
+33091	bash-color-prompt-0.7.1-2.fc43.noarch
+32960	p11-kit-server-0.25.8-1.fc43.x86_64
+32952	qemu-block-curl-10.1.0-7.fc43.x86_64
+32930	anaconda-live-43.44-3.fc43.noarch
+32845	perl-DynaLoader-1.57-520.fc43.x86_64
+32842	nftables-services-1.1.3-5.fc43.noarch
+32744	google-noto-serif-hebrew-vf-fonts-20250901-1.fc43.noarch
+32606	abrt-gui-libs-2.17.7-1.fc43.x86_64
+32504	selinux-policy-42.12-1.fc43.noarch
+32494	qemu-device-usb-smartcard-10.1.0-7.fc43.x86_64
+32440	libblockdev-mdraid-3.4.0-1.fc43.x86_64
+32260	colord-gtk4-0.3.1-4.fc43.x86_64
+32243	gnome-keyring-pam-48.0-3.fc43.x86_64
+32227	qemu-block-gluster-10.1.0-7.fc43.x86_64
+31856	cairo-gobject-1.18.4-2.fc43.x86_64
+31754	libblockdev-tools-3.4.0-1.fc43.x86_64
+31549	b43-openfwwf-5.2-46.fc43.noarch
+31536	ghostscript-10.05.1-5.fc43.x86_64
+31523	mactel-boot-0.9-36.fc43.x86_64
+31425	perl-MIME-Base32-1.303-24.fc43.noarch
+31233	plymouth-scripts-24.004.60-20.fc43.x86_64
+31172	fprintd-pam-1.94.5-2.fc43.x86_64
+31052	kernel-tools-libs-6.17.1-300.fc43.x86_64
+30700	libreoffice-emailmerge-25.8.1.1-0.2.fc43.x86_64
+30580	xdriinfo-1.0.7-5.fc43.x86_64
+30513	google-noto-sans-meetei-mayek-vf-fonts-20250901-1.fc43.noarch
+30313	google-noto-sans-thaana-vf-fonts-20250901-1.fc43.noarch
+29997	perl-Term-Cap-1.18-520.fc43.noarch
+29893	mtdev-1.1.6-11.fc43.x86_64
+29559	python3-3.14.0-1.fc43.x86_64
+29535	qemu-block-nfs-10.1.0-7.fc43.x86_64
+29300	libraqm-0.10.1-3.fc43.x86_64
+29208	libfsverity-1.6-3.fc43.x86_64
+29189	python3-file-magic-5.46-8.fc43.noarch
+29184	qemu-audio-alsa-10.1.0-7.fc43.x86_64
+29165	perl-NDBM_File-1.18-520.fc43.x86_64
+28608	libvirt-daemon-driver-storage-logical-11.6.0-1.fc43.x86_64
+28560	libportal-gtk4-0.9.1-2.fc43.x86_64
+28560	libportal-gtk3-0.9.1-2.fc43.x86_64
+28507	python3-gobject-3.54.3-1.fc43.x86_64
+28493	libvirt-daemon-driver-storage-iscsi-direct-11.6.0-1.fc43.x86_64
+28493	libvirt-daemon-driver-storage-disk-11.6.0-1.fc43.x86_64
+28462	qemu-audio-pa-10.1.0-7.fc43.x86_64
+28330	libvirt-daemon-plugin-lockd-11.6.0-1.fc43.x86_64
+28315	perl-IPC-Open3-1.24-520.fc43.noarch
+27966	libblockdev-btrfs-3.4.0-1.fc43.x86_64
+27809	google-noto-sans-hebrew-vf-fonts-20250901-1.fc43.noarch
+26981	google-noto-sans-ol-chiki-vf-fonts-20250901-1.fc43.noarch
+26909	xcb-util-0.4.1-8.fc43.x86_64
+26875	perl-constant-1.33-521.fc43.noarch
+26790	libXfixes-6.0.1-6.fc43.x86_64
+26625	libXv-1.0.13-3.fc43.x86_64
+26265	python3-iso639-0.1.4-32.fc43.noarch
+26011	perl-Class-Struct-0.68-520.fc43.noarch
+26005	libverto-0.3.2-11.fc43.x86_64
+25951	xhost-1.0.9-10.fc43.x86_64
+25859	libXxf86vm-1.1.6-3.fc43.x86_64
+25520	perl-Pod-Escapes-1.07-520.fc43.noarch
+25005	libattr-2.5.2-6.fc43.x86_64
+24950	xcb-util-renderutil-0.3.10-8.fc43.x86_64
+24248	PackageKit-gstreamer-plugin-1.3.1-6.fc43.x86_64
+24085	luksmeta-9-25.fc43.x86_64
+24008	libblockdev-nvdimm-3.4.0-1.fc43.x86_64
+23885	mythes-1.2.5-9.fc43.x86_64
+23741	xcb-util-cursor-0.1.5-4.fc43.x86_64
+23564	compsize-1.5^git20250123.d79eacf-13.fc43.x86_64
+23311	dnf-plugins-core-4.10.1-6.fc43.noarch
+23124	perl-Text-Tabs+Wrap-2024.001-520.fc43.noarch
+22935	inih-62-1.fc43.x86_64
+22696	xcb-util-image-0.4.1-8.fc43.x86_64
+22593	gnome-shell-extension-apps-menu-49.0-2.fc43.noarch
+22264	symlinks-1.7-13.fc43.x86_64
+22006	python3-pwquality-1.4.5-14.fc43.x86_64
+21643	libreport-plugin-systemd-journal-2.17.15-9.fc43.x86_64
+21479	pam_passwdqc-2.0.3-8.fc43.x86_64
+21290	libXres-1.2.2-6.fc43.x86_64
+21234	libvdpau-1.5-10.fc43.x86_64
+21075	perl-AutoLoader-5.74-520.fc43.noarch
+21067	fedora-release-common-43-25.noarch
+20946	gnome-shell-extension-places-menu-49.0-2.fc43.noarch
+20939	qemu-char-spice-10.1.0-7.fc43.x86_64
+20650	hypervfcopyd-6.10-2.fc43.x86_64
+20421	hypervvssd-6.10-2.fc43.x86_64
+20352	qemu-audio-jack-10.1.0-7.fc43.x86_64
+20352	libvirt-ssh-proxy-11.6.0-1.fc43.x86_64
+20231	qemu-audio-oss-10.1.0-7.fc43.x86_64
+20205	libvirt-daemon-driver-storage-scsi-11.6.0-1.fc43.x86_64
+20190	libvirt-daemon-driver-storage-iscsi-11.6.0-1.fc43.x86_64
+20183	qemu-audio-sdl-10.1.0-7.fc43.x86_64
+20172	pulseaudio-libs-glib2-17.0-7.fc43.x86_64
+20140	mesa-libgbm-25.2.4-2.fc43.x86_64
+20092	PackageKit-gtk3-module-1.3.1-6.fc43.x86_64
+20082	avahi-glib-0.9~rc2-6.fc43.x86_64
+20018	qemu-char-baum-10.1.0-7.fc43.x86_64
+20004	libblockdev-swap-3.4.0-1.fc43.x86_64
+19964	papers-nautilus-49.1-2.fc43.x86_64
+19948	libblockdev-loop-3.4.0-1.fc43.x86_64
+19891	qemu-device-display-virtio-vga-10.1.0-7.fc43.x86_64
+19871	apr-util-openssl-1.6.3-24.fc43.x86_64
+19784	libblockdev-dm-3.4.0-1.fc43.x86_64
+19726	libblockdev-mpath-3.4.0-1.fc43.x86_64
+19630	libreport-anaconda-2.17.15-9.fc43.x86_64
+18998	NetworkManager-ssh-selinux-1.4.1-3.fc43.x86_64
+18894	python3-abrt-addon-2.17.7-1.fc43.noarch
+18693	hyperv-daemons-license-6.10-2.fc43.noarch
+18498	nss-sysinit-3.115.1-1.fc43.x86_64
+18203	fedora-chromium-config-gnome-3.0-8.fc43.noarch
+18172	google-noto-fonts-common-20250901-1.fc43.noarch
+18047	fedora-chromium-config-3.0-8.fc43.noarch
+17438	gnome-classic-session-49.0-2.fc43.noarch
+17075	xcb-util-keysyms-0.4.1-8.fc43.x86_64
+16949	nbdkit-selinux-1.45.8-1.fc43.noarch
+16812	gnome-shell-common-49.1-1.fc43.noarch
+16584	gnome-session-wayland-session-49.1-1.fc43.x86_64
+16240	libdnf5-plugin-notify-PackageKit-1.3.1-6.fc43.x86_64
+16041	qemu-audio-spice-10.1.0-7.fc43.x86_64
+15990	libvirt-daemon-driver-storage-mpath-11.6.0-1.fc43.x86_64
+15924	libverto-libev-0.3.2-11.fc43.x86_64
+15885	qemu-ui-egl-headless-10.1.0-7.fc43.x86_64
+15818	qemu-ui-spice-app-10.1.0-7.fc43.x86_64
+15782	harfbuzz-icu-11.5.1-1.fc43.x86_64
+15479	qemu-device-display-virtio-gpu-pci-10.1.0-7.fc43.x86_64
+15317	libXinerama-1.1.5-9.fc43.x86_64
+15313	tesseract-tessdata-doc-4.1.0-11.fc43.noarch
+15018	abrt-addon-pstoreoops-2.17.7-1.fc43.x86_64
+15012	tesseract-common-5.5.1-3.fc43.noarch
+14846	libxcvt-0.1.2-10.fc43.x86_64
+14747	pkgconf-m4-2.3.0-3.fc43.noarch
+14593	python3-requests-file-2.0.0-9.fc43.noarch
+14377	perl-File-Basename-2.86-520.fc43.noarch
+13879	perl-Text-ParseWords-3.31-520.fc43.noarch
+13382	google-noto-sans-gothic-fonts-20250901-1.fc43.noarch
+13040	flatpak-selinux-1.16.1-1.fc43.noarch
+12889	perl-base-2.27-520.fc43.noarch
+12858	wireless-regdb-2025.02.20-2.fc43.noarch
+12847	perl-File-stat-1.14-520.fc43.noarch
+12736	libxshmfence-1.3.2-7.fc43.x86_64
+12714	libwayland-egl-1.24.0-1.fc43.x86_64
+12516	rpm-plugin-systemd-inhibit-6.0.0-1.fc43.x86_64
+12500	boost-date-time-1.83.0-17.fc43.x86_64
+12497	boost-system-1.83.0-17.fc43.x86_64
+12414	rpm-plugin-audit-6.0.0-1.fc43.x86_64
+12361	fedora-logos-httpd-42.0.1-2.fc43.noarch
+12275	rpm-plugin-selinux-6.0.0-1.fc43.x86_64
+12155	default-fonts-core-sans-4.2-5.fc43.noarch
+11524	qemu-device-display-virtio-vga-rutabaga-10.1.0-7.fc43.x86_64
+11510	qemu-device-display-virtio-vga-gl-10.1.0-7.fc43.x86_64
+11503	dbus-common-1.16.0-4.fc43.noarch
+11486	perl-Getopt-Std-1.14-520.fc43.noarch
+11475	qemu-block-dmg-10.1.0-7.fc43.x86_64
+11379	apr-util-lmdb-1.6.3-24.fc43.x86_64
+11349	qemu-device-display-virtio-gpu-ccw-10.1.0-7.fc43.x86_64
+11336	qemu-device-display-virtio-gpu-pci-rutabaga-10.1.0-7.fc43.x86_64
+11306	qemu-device-display-virtio-gpu-pci-gl-10.1.0-7.fc43.x86_64
+11204	libX11-xcb-1.8.12-1.fc43.x86_64
+10515	perl-parent-0.244-520.fc43.noarch
+10442	vim-data-9.1.1818-1.fc43.noarch
+9609	perl-FileHandle-2.05-520.fc43.noarch
+9124	kasumi-common-2.5-49.fc43.noarch
+8748	perl-lib-0.65-520.fc43.x86_64
+8572	perl-Errno-1.38-520.fc43.x86_64
+7645	python3-urllib3+socks-2.5.0-3.fc43.noarch
+7552	python3-certifi-2025.07.09-3.fc43.noarch
+7396	dracut-squash-107-8.fc43.x86_64
+7123	tuned-ppd-2.26.0-2.fc43.noarch
+7012	perl-Symbol-1.09-520.fc43.noarch
+6288	perl-locale-1.13-520.fc43.noarch
+5985	perl-if-0.61.000-520.fc43.noarch
+5832	initscripts-service-10.26-4.fc43.noarch
+5478	urw-base35-fonts-20200910-26.fc43.noarch
+5257	fedora-flathub-remote-1-11.fc43.noarch
+4993	perl-overloading-0.02-520.fc43.noarch
+4971	fedora-repos-43-1.noarch
+4628	dracut-config-rescue-107-8.fc43.x86_64
+3995	perl-vars-1.05-520.fc43.noarch
+3682	mesa-filesystem-25.2.4-2.fc43.x86_64
+3617	fedora-workstation-repositories-38-8.fc43.x86_64
+3553	ghostscript-tools-printing-10.05.1-5.fc43.noarch
+3019	dnf4-plugin-notify-PackageKit-1.3.1-6.fc43.noarch
+2537	ghostscript-tools-fontutils-10.05.1-5.fc43.noarch
+2256	perl-SelectSaver-1.02-520.fc43.noarch
+2229	default-fonts-cjk-sans-4.2-5.fc43.noarch
+2063	javapackages-filesystem-6.4.1-4.fc43.noarch
+1810	elfutils-default-yama-scope-0.193-3.fc43.noarch
+1487	kf6-filesystem-6.18.0-1.fc43.x86_64
+1464	gnome-shell-extension-launch-new-instance-49.0-2.fc43.noarch
+1365	rootfiles-9.0-4.fc43.noarch
+1164	qt-settings-43.1-1.fc43.noarch
+989	pkgconf-pkg-config-2.3.0-3.fc43.x86_64
+774	kde-filesystem-5-6.fc43.x86_64
+706	f43-backgrounds-gnome-43.0.3-1.fc43.noarch
+631	fedora-release-identity-basic-43-25.noarch
+514	nano-default-editor-8.5-2.fc43.noarch
+497	mariadb-connector-c-config-3.4.5-2.fc43.noarch
+470	libvirt-daemon-config-network-11.6.0-1.fc43.x86_64
+464	httpd-filesystem-2.4.64-3.fc43.noarch
+424	default-fonts-cjk-mono-4.2-5.fc43.noarch
+417	default-fonts-cjk-serif-4.2-5.fc43.noarch
+400	langpacks-en-4.2-5.fc43.noarch
+398	langpacks-core-en-4.2-5.fc43.noarch
+380	default-fonts-other-sans-4.2-5.fc43.noarch
+378	default-fonts-other-mono-4.2-5.fc43.noarch
+371	default-fonts-other-serif-4.2-5.fc43.noarch
+371	default-fonts-core-mono-4.2-5.fc43.noarch
+364	default-fonts-nr-4.2-5.fc43.noarch
+364	default-fonts-core-serif-4.2-5.fc43.noarch
+361	desktop-backgrounds-gnome-43.0.0-1.fc43.noarch
+361	default-fonts-nso-4.2-5.fc43.noarch
+354	default-fonts-ia-4.2-5.fc43.noarch
+352	default-fonts-vi-4.2-5.fc43.noarch
+352	default-fonts-be-4.2-5.fc43.noarch
+350	default-fonts-uk-4.2-5.fc43.noarch
+350	default-fonts-nb-4.2-5.fc43.noarch
+350	default-fonts-ml-4.2-5.fc43.noarch
+350	default-fonts-iu-4.2-5.fc43.noarch
+350	default-fonts-eo-4.2-5.fc43.noarch
+350	default-fonts-dz-4.2-5.fc43.noarch
+350	default-fonts-bg-4.2-5.fc43.noarch
+349	default-fonts-mni-4.2-5.fc43.noarch
+349	default-fonts-mai-4.2-5.fc43.noarch
+349	default-fonts-chr-4.2-5.fc43.noarch
+349	default-fonts-ast-4.2-5.fc43.noarch
+348	default-fonts-ka-4.2-5.fc43.noarch
+348	default-fonts-hy-4.2-5.fc43.noarch
+348	default-fonts-gu-4.2-5.fc43.noarch
+348	default-fonts-as-4.2-5.fc43.noarch
+347	default-fonts-sat-4.2-5.fc43.noarch
+346	default-fonts-yi-4.2-5.fc43.noarch
+346	default-fonts-si-4.2-5.fc43.noarch
+346	default-fonts-ru-4.2-5.fc43.noarch
+346	default-fonts-pa-4.2-5.fc43.noarch
+346	default-fonts-nn-4.2-5.fc43.noarch
+346	default-fonts-my-4.2-5.fc43.noarch
+346	default-fonts-mr-4.2-5.fc43.noarch
+346	default-fonts-ku-4.2-5.fc43.noarch
+346	default-fonts-kn-4.2-5.fc43.noarch
+346	default-fonts-fa-4.2-5.fc43.noarch
+346	default-fonts-bo-4.2-5.fc43.noarch
+346	default-fonts-bn-4.2-5.fc43.noarch
+346	default-fonts-am-4.2-5.fc43.noarch
+345	default-fonts-syr-4.2-5.fc43.noarch
+345	default-fonts-kab-4.2-5.fc43.noarch
+345	default-fonts-got-4.2-5.fc43.noarch
+344	default-fonts-ts-4.2-5.fc43.noarch
+344	default-fonts-tn-4.2-5.fc43.noarch
+344	default-fonts-te-4.2-5.fc43.noarch
+344	default-fonts-ne-4.2-5.fc43.noarch
+344	default-fonts-he-4.2-5.fc43.noarch
+344	default-fonts-eu-4.2-5.fc43.noarch
+344	default-fonts-dv-4.2-5.fc43.noarch
+344	default-fonts-br-4.2-5.fc43.noarch
+344	default-fonts-ar-4.2-5.fc43.noarch
+342	default-fonts-xh-4.2-5.fc43.noarch
+342	default-fonts-ve-4.2-5.fc43.noarch
+342	default-fonts-ta-4.2-5.fc43.noarch
+342	default-fonts-ss-4.2-5.fc43.noarch
+342	default-fonts-km-4.2-5.fc43.noarch
+342	default-fonts-hi-4.2-5.fc43.noarch
+342	default-fonts-el-4.2-5.fc43.noarch
+341	langpacks-fonts-en-4.2-5.fc43.noarch
+341	default-fonts-nqo-4.2-5.fc43.noarch
+340	default-fonts-zu-4.2-5.fc43.noarch
+340	default-fonts-ur-4.2-5.fc43.noarch
+340	default-fonts-th-4.2-5.fc43.noarch
+340	default-fonts-or-4.2-5.fc43.noarch
+338	default-fonts-lo-4.2-5.fc43.noarch
+338	default-fonts-core-emoji-4.2-5.fc43.noarch
+334	default-fonts-core-math-4.2-5.fc43.noarch
+321	zram-generator-defaults-1.2.1-3.fc43.noarch
+310	NetworkManager-config-connectivity-fedora-1.54.0-2.fc43.noarch
+277	libssh-config-0.11.3-1.fc43.noarch
+239	firewalld-filesystem-2.3.1-5.fc43.noarch
+187	systemd-oomd-defaults-258-1.fc43.noarch
+175	libkcapi-hmaccalc-1.5.0-6.fc43.x86_64
+151	color-filesystem-1-36.fc43.noarch
+115	mesa-va-drivers-25.2.4-2.fc43.x86_64
+112	filesystem-3.18-50.fc43.x86_64
+78	qt5-qtbase-common-5.15.17-5.fc43.noarch
+74	qt6-qtbase-common-6.9.2-1.fc43.noarch
+42	wget2-wget-2.2.0-6.fc43.x86_64
+38	fuse-common-3.16.2-5.fc42.x86_64
+35	pipewire-config-raop-1.4.8-2.fc43.x86_64
+31	grub2-pc-2.12-40.fc43.x86_64
+30	pipewire-jack-audio-connection-kit-1.4.8-2.fc43.x86_64
+23	python-unversioned-command-3.14.0-1.fc43.noarch
+0	qt6-filesystem-6.9.2-1.fc43.x86_64
+0	qt5-filesystem-5.15.17-2.fc43.x86_64
+0	qemu-system-x86-10.1.0-7.fc43.x86_64
+0	qemu-kvm-core-10.1.0-7.fc43.x86_64
+0	qemu-kvm-10.1.0-7.fc43.x86_64
+0	plymouth-system-theme-24.004.60-20.fc43.x86_64
+0	passwdqc-2.0.3-8.fc43.x86_64
+0	nbdkit-1.45.8-1.fc43.x86_64
+0	mozilla-filesystem-1.9-36.fc43.x86_64
+0	llvm-filesystem-21.1.2-1.fc43.x86_64
+0	libvirt-daemon-kvm-11.6.0-1.fc43.x86_64
+0	libvirt-daemon-driver-storage-11.6.0-1.fc43.x86_64
+0	libreport-filesystem-2.17.15-9.fc43.noarch
+0	libreoffice-filters-25.8.1.1-0.2.fc43.x86_64
+0	libblockdev-plugins-all-3.4.0-1.fc43.x86_64
+0	kernel-6.17.1-300.fc43.x86_64
+0	hyperv-daemons-6.10-2.fc43.x86_64
+0	hunspell-filesystem-1.7.2-10.fc43.x86_64
+0	gpg-pubkey-c6e7f081cf80e13146676e88829b606631645531-66b6dccf.(none)
+0	gnome-control-center-filesystem-49.1-1.fc43.noarch
+0	fonts-filesystem-2.0.5-23.fc43.noarch
+0	fedora-release-43-25.noarch
+0	emacs-filesystem-30.0-5.fc43.noarch
+0	efi-filesystem-6-4.fc43.noarch
+0	default-editor-8.5-2.fc43.noarch
+0	dbus-1.16.0-4.fc43.x86_64
+0	cups-filesystem-2.4.14-2.fc43.noarch
+0	containers-common-extra-0.64.2-1.fc43.noarch
+0	anaconda-install-env-deps-43.44-3.fc43.x86_64
+0	abrt-desktop-2.17.7-1.fc43.x86_64
+0	abrt-cli-2.17.7-1.fc43.x86_64
+Updating index cache for path `/usr/share/man/man1'. Wait...
+Processing manual pages under /usr/share/man...
+/usr/bin/mandb: warning: /usr/share/man/man1/lastb.1.gz: whatis parse for lastb(1) failed
+/usr/bin/mandb: warning: /usr/share/man/man1/exiv2.1.gz: whatis parse for exiv2(1) failed
+/usr/bin/mandb: warning: /usr/share/man/man1/wl-copy.1.gz: whatis parse for wl-copy(1) failed
+/usr/bin/mandb: warning: /usr/share/man/man1/wl-paste.1.gz: whatis parse for wl-paste(1) failed
+Updating index cache for path `/usr/share/man/man4x'. Wait...
+Updating index cache for path `/usr/share/man/man6x'. Wait...
+Updating index cache for path `/usr/share/man/man5'. Wait...
+Updating index cache for path `/usr/share/man/mann'. Wait...
+Updating index cache for path `/usr/share/man/man9x'. Wait...
+Updating index cache for path `/usr/share/man/man3type'. Wait...
+Updating index cache for path `/usr/share/man/man2x'. Wait...
+Updating index cache for path `/usr/share/man/man2'. Wait...
+Updating index cache for path `/usr/share/man/man3x'. Wait...
+Updating index cache for path `/usr/share/man/man3'. Wait...
+Updating index cache for path `/usr/share/man/man5x'. Wait...
+Updating index cache for path `/usr/share/man/man2type'. Wait...
+Updating index cache for path `/usr/share/man/man0p'. Wait...
+Updating index cache for path `/usr/share/man/man3p'. Wait...
+Updating index cache for path `/usr/share/man/man8'. Wait...
+/usr/bin/mandb: warning: /usr/share/man/man8/swapoff.8.gz: whatis parse for swapoff(8) failed
+/usr/bin/mandb: warning: /usr/share/man/man8/raid6check.man.gz: ignoring bogus filename
+/usr/bin/mandb: warning: /usr/share/man/man8/cryptsetup-bitlkOpen.8.gz: whatis parse for cryptsetup-bitlkOpen(8) failed
+/usr/bin/mandb: warning: /usr/share/man/man8/cryptsetup-create.8.gz: whatis parse for cryptsetup-create(8) failed
+/usr/bin/mandb: warning: /usr/share/man/man8/cryptsetup-fvault2Open.8.gz: whatis parse for cryptsetup-fvault2Open(8) failed
+/usr/bin/mandb: warning: /usr/share/man/man8/cryptsetup-loopaesOpen.8.gz: whatis parse for cryptsetup-loopaesOpen(8) failed
+/usr/bin/mandb: warning: /usr/share/man/man8/cryptsetup-luksErase.8.gz: whatis parse for cryptsetup-luksErase(8) failed
+/usr/bin/mandb: warning: /usr/share/man/man8/cryptsetup-luksOpen.8.gz: whatis parse for cryptsetup-luksOpen(8) failed
+/usr/bin/mandb: warning: /usr/share/man/man8/cryptsetup-plainOpen.8.gz: whatis parse for cryptsetup-plainOpen(8) failed
+/usr/bin/mandb: warning: /usr/share/man/man8/cryptsetup-tcryptOpen.8.gz: whatis parse for cryptsetup-tcryptOpen(8) failed
+/usr/bin/mandb: can't resolve man8/tc-cbq.8
+/usr/bin/mandb: warning: /usr/share/man/man8/cbq.8.gz: bad symlink or ROFF `.so' request
+Updating index cache for path `/usr/share/man/man7'. Wait...
+/usr/bin/mandb: warning: /usr/share/man/man7/cap_text_formats.7.gz: whatis parse for cap_text_formats(7) failed
+/usr/bin/mandb: warning: /usr/share/man/man7/podman-rootless.7.gz: whatis parse for podman-rootless(7) failed
+/usr/bin/mandb: warning: /usr/share/man/man7/podman-troubleshooting.7.gz: whatis parse for podman-troubleshooting(7) failed
+/usr/bin/mandb: can't resolve man7/groff_man.7
+/usr/bin/mandb: warning: /usr/share/man/man7/man.7.gz: bad symlink or ROFF `.so' request
+/usr/bin/mandb: can't resolve man7/groff_man.7
+/usr/bin/mandb: warning: /usr/share/man/man7/man.man-pages.7.gz: bad symlink or ROFF `.so' request
+Updating index cache for path `/usr/share/man/man3head'. Wait...
+Updating index cache for path `/usr/share/man/man7x'. Wait...
+Updating index cache for path `/usr/share/man/man1x'. Wait...
+Updating index cache for path `/usr/share/man/man4'. Wait...
+Updating index cache for path `/usr/share/man/man2const'. Wait...
+Updating index cache for path `/usr/share/man/man8x'. Wait...
+Updating index cache for path `/usr/share/man/man9'. Wait...
+Updating index cache for path `/usr/share/man/man6'. Wait...
+Updating index cache for path `/usr/share/man/man3const'. Wait...
+Updating index cache for path `/usr/share/man/man1p'. Wait...
+done.
+Updating index cache for path `/usr/share/man/id/man1'. Wait...
+Updating index cache for path `/usr/share/man/id/man5'. Wait...
+Updating index cache for path `/usr/share/man/id/man8'. Wait...
+done.
+Updating index cache for path `/usr/share/man/nl/man1'. Wait...
+Updating index cache for path `/usr/share/man/nl/man5'. Wait...
+Updating index cache for path `/usr/share/man/nl/man8'. Wait...
+Updating index cache for path `/usr/share/man/nl/man7'. Wait...
+done.
+Updating index cache for path `/usr/share/man/ru/man1'. Wait...
+Updating index cache for path `/usr/share/man/ru/man5'. Wait...
+Updating index cache for path `/usr/share/man/ru/man3'. Wait...
+Updating index cache for path `/usr/share/man/ru/man8'. Wait...
+Updating index cache for path `/usr/share/man/ru/man7'. Wait...
+done.
+Updating index cache for path `/usr/share/man/ro/man1'. Wait...
+Updating index cache for path `/usr/share/man/ro/man5'. Wait...
+Updating index cache for path `/usr/share/man/ro/man8'. Wait...
+done.
+Updating index cache for path `/usr/share/man/sr/man1'. Wait...
+Updating index cache for path `/usr/share/man/sr/man5'. Wait...
+Updating index cache for path `/usr/share/man/sr/man8'. Wait...
+done.
+Updating index cache for path `/usr/share/man/hr/man1'. Wait...
+done.
+Updating index cache for path `/usr/share/man/zh_CN/man1'. Wait...
+Updating index cache for path `/usr/share/man/zh_CN/man5'. Wait...
+Updating index cache for path `/usr/share/man/zh_CN/man3'. Wait...
+Updating index cache for path `/usr/share/man/zh_CN/man8'. Wait...
+done.
+Updating index cache for path `/usr/share/man/fi/man8'. Wait...
+Updating index cache for path `/usr/share/man/fi/man7'. Wait...
+done.
+Updating index cache for path `/usr/share/man/sv/man1'. Wait...
+Updating index cache for path `/usr/share/man/sv/man5'. Wait...
+Updating index cache for path `/usr/share/man/sv/man3'. Wait...
+Updating index cache for path `/usr/share/man/sv/man8'. Wait...
+Updating index cache for path `/usr/share/man/sv/man7'. Wait...
+done.
+Updating index cache for path `/usr/share/man/hu/man1'. Wait...
+done.
+Updating index cache for path `/usr/share/man/ko/man1'. Wait...
+Updating index cache for path `/usr/share/man/ko/man5'. Wait...
+Updating index cache for path `/usr/share/man/ko/man8'. Wait...
+Updating index cache for path `/usr/share/man/ko/man7'. Wait...
+done.
+Updating index cache for path `/usr/share/man/da/man1'. Wait...
+Updating index cache for path `/usr/share/man/da/man5'. Wait...
+Updating index cache for path `/usr/share/man/da/man8'. Wait...
+done.
+Updating index cache for path `/usr/share/man/it/man1'. Wait...
+Updating index cache for path `/usr/share/man/it/man5'. Wait...
+Updating index cache for path `/usr/share/man/it/man3'. Wait...
+Updating index cache for path `/usr/share/man/it/man8'. Wait...
+Updating index cache for path `/usr/share/man/it/man7'. Wait...
+done.
+Updating index cache for path `/usr/share/man/ca/man5'. Wait...
+Updating index cache for path `/usr/share/man/ca/man7'. Wait...
+done.
+Updating index cache for path `/usr/share/man/pl/man1'. Wait...
+Updating index cache for path `/usr/share/man/pl/man5'. Wait...
+Updating index cache for path `/usr/share/man/pl/man3'. Wait...
+Updating index cache for path `/usr/share/man/pl/man8'. Wait...
+done.
+Updating index cache for path `/usr/share/man/cs/man1'. Wait...
+Updating index cache for path `/usr/share/man/cs/man5'. Wait...
+Updating index cache for path `/usr/share/man/cs/man8'. Wait...
+Updating index cache for path `/usr/share/man/cs/man7'. Wait...
+done.
+Updating index cache for path `/usr/share/man/es/man1'. Wait...
+Updating index cache for path `/usr/share/man/es/man5'. Wait...
+Updating index cache for path `/usr/share/man/es/man8'. Wait...
+Updating index cache for path `/usr/share/man/es/man7'. Wait...
+done.
+Updating index cache for path `/usr/share/man/pt_BR/man1'. Wait...
+Updating index cache for path `/usr/share/man/pt_BR/man5'. Wait...
+Updating index cache for path `/usr/share/man/pt_BR/man8'. Wait...
+Updating index cache for path `/usr/share/man/pt_BR/man7'. Wait...
+done.
+Updating index cache for path `/usr/share/man/fr/man1'. Wait...
+Updating index cache for path `/usr/share/man/fr/man5'. Wait...
+Updating index cache for path `/usr/share/man/fr/man3'. Wait...
+Updating index cache for path `/usr/share/man/fr/man8'. Wait...
+Updating index cache for path `/usr/share/man/fr/man7'. Wait...
+done.
+Updating index cache for path `/usr/share/man/uk/man1'. Wait...
+Updating index cache for path `/usr/share/man/uk/man5'. Wait...
+Updating index cache for path `/usr/share/man/uk/man3'. Wait...
+Updating index cache for path `/usr/share/man/uk/man8'. Wait...
+Updating index cache for path `/usr/share/man/uk/man7'. Wait...
+done.
+Updating index cache for path `/usr/share/man/zh_TW/man1'. Wait...
+Updating index cache for path `/usr/share/man/zh_TW/man8'. Wait...
+done.
+Updating index cache for path `/usr/share/man/pt/man1'. Wait...
+Updating index cache for path `/usr/share/man/pt/man5'. Wait...
+Updating index cache for path `/usr/share/man/pt/man8'. Wait...
+Updating index cache for path `/usr/share/man/pt/man7'. Wait...
+done.
+Updating index cache for path `/usr/share/man/tr/man1'. Wait...
+Updating index cache for path `/usr/share/man/tr/man5'. Wait...
+Updating index cache for path `/usr/share/man/tr/man8'. Wait...
+Updating index cache for path `/usr/share/man/tr/man7'. Wait...
+done.
+Updating index cache for path `/usr/share/man/ja/man1'. Wait...
+Updating index cache for path `/usr/share/man/ja/man5'. Wait...
+Updating index cache for path `/usr/share/man/ja/man8'. Wait...
+Updating index cache for path `/usr/share/man/ja/man7'. Wait...
+done.
+Updating index cache for path `/usr/share/man/de/man1'. Wait...
+Updating index cache for path `/usr/share/man/de/man5'. Wait...
+Updating index cache for path `/usr/share/man/de/man3'. Wait...
+Updating index cache for path `/usr/share/man/de/man8'. Wait...
+Updating index cache for path `/usr/share/man/de/man7'. Wait...
+done.
+Updating index cache for path `/usr/local/share/man/man1'. Wait...
+Updating index cache for path `/usr/local/share/man/man4x'. Wait...
+Updating index cache for path `/usr/local/share/man/man6x'. Wait...
+Updating index cache for path `/usr/local/share/man/man5'. Wait...
+Updating index cache for path `/usr/local/share/man/mann'. Wait...
+Updating index cache for path `/usr/local/share/man/man9x'. Wait...
+Updating index cache for path `/usr/local/share/man/man2x'. Wait...
+Updating index cache for path `/usr/local/share/man/man2'. Wait...
+Updating index cache for path `/usr/local/share/man/man3x'. Wait...
+Updating index cache for path `/usr/local/share/man/man3'. Wait...
+Updating index cache for path `/usr/local/share/man/man5x'. Wait...
+Updating index cache for path `/usr/local/share/man/man8'. Wait...
+Updating index cache for path `/usr/local/share/man/man7'. Wait...
+Updating index cache for path `/usr/local/share/man/man7x'. Wait...
+Updating index cache for path `/usr/local/share/man/man1x'. Wait...
+Updating index cache for path `/usr/local/share/man/man4'. Wait...
+Updating index cache for path `/usr/local/share/man/man8x'. Wait...
+Updating index cache for path `/usr/local/share/man/man9'. Wait...
+Updating index cache for path `/usr/local/share/man/man6'. Wait...
+done.
+Checking for stray cats under /usr/share/man...
+Checking for stray cats under /var/cache/man...
+Processing manual pages under /usr/share/man/id...
+Checking for stray cats under /usr/share/man/id...
+Checking for stray cats under /var/cache/man/id...
+Processing manual pages under /usr/share/man/nl...
+Checking for stray cats under /usr/share/man/nl...
+Checking for stray cats under /var/cache/man/nl...
+Processing manual pages under /usr/share/man/ru...
+Checking for stray cats under /usr/share/man/ru...
+Checking for stray cats under /var/cache/man/ru...
+Processing manual pages under /usr/share/man/ro...
+Checking for stray cats under /usr/share/man/ro...
+Checking for stray cats under /var/cache/man/ro...
+Processing manual pages under /usr/share/man/sr...
+Checking for stray cats under /usr/share/man/sr...
+Checking for stray cats under /var/cache/man/sr...
+Processing manual pages under /usr/share/man/hr...
+Checking for stray cats under /usr/share/man/hr...
+Checking for stray cats under /var/cache/man/hr...
+Processing manual pages under /usr/share/man/zh_CN...
+Checking for stray cats under /usr/share/man/zh_CN...
+Checking for stray cats under /var/cache/man/zh_CN...
+Processing manual pages under /usr/share/man/fi...
+Checking for stray cats under /usr/share/man/fi...
+Checking for stray cats under /var/cache/man/fi...
+Processing manual pages under /usr/share/man/sv...
+Checking for stray cats under /usr/share/man/sv...
+Checking for stray cats under /var/cache/man/sv...
+Processing manual pages under /usr/share/man/hu...
+Checking for stray cats under /usr/share/man/hu...
+Checking for stray cats under /var/cache/man/hu...
+Processing manual pages under /usr/share/man/ko...
+Checking for stray cats under /usr/share/man/ko...
+Checking for stray cats under /var/cache/man/ko...
+Processing manual pages under /usr/share/man/da...
+Checking for stray cats under /usr/share/man/da...
+Checking for stray cats under /var/cache/man/da...
+Processing manual pages under /usr/share/man/it...
+Checking for stray cats under /usr/share/man/it...
+Checking for stray cats under /var/cache/man/it...
+Processing manual pages under /usr/share/man/ca...
+Checking for stray cats under /usr/share/man/ca...
+Checking for stray cats under /var/cache/man/ca...
+Processing manual pages under /usr/share/man/pl...
+Checking for stray cats under /usr/share/man/pl...
+Checking for stray cats under /var/cache/man/pl...
+Processing manual pages under /usr/share/man/cs...
+Checking for stray cats under /usr/share/man/cs...
+Checking for stray cats under /var/cache/man/cs...
+Processing manual pages under /usr/share/man/es...
+Checking for stray cats under /usr/share/man/es...
+Checking for stray cats under /var/cache/man/es...
+Processing manual pages under /usr/share/man/pt_BR...
+Checking for stray cats under /usr/share/man/pt_BR...
+Checking for stray cats under /var/cache/man/pt_BR...
+Processing manual pages under /usr/share/man/fr...
+Checking for stray cats under /usr/share/man/fr...
+Checking for stray cats under /var/cache/man/fr...
+Processing manual pages under /usr/share/man/uk...
+Checking for stray cats under /usr/share/man/uk...
+Checking for stray cats under /var/cache/man/uk...
+Processing manual pages under /usr/share/man/zh_TW...
+Checking for stray cats under /usr/share/man/zh_TW...
+Checking for stray cats under /var/cache/man/zh_TW...
+Processing manual pages under /usr/share/man/pt...
+Checking for stray cats under /usr/share/man/pt...
+Checking for stray cats under /var/cache/man/pt...
+Processing manual pages under /usr/share/man/tr...
+Checking for stray cats under /usr/share/man/tr...
+Checking for stray cats under /var/cache/man/tr...
+Processing manual pages under /usr/share/man/ja...
+Checking for stray cats under /usr/share/man/ja...
+Checking for stray cats under /var/cache/man/ja...
+Processing manual pages under /usr/share/man/de...
+Checking for stray cats under /usr/share/man/de...
+Checking for stray cats under /var/cache/man/de...
+Processing manual pages under /usr/local/share/man...
+Checking for stray cats under /usr/local/share/man...
+Checking for stray cats under /var/cache/man/local...
+136 man subdirectories contained newer manual pages.
+8904 manual pages were added.
+0 stray cats were added.
+0 old database entries were purged.
+Failed to disable unit: Unit network.service does not exist
+Failed to disable unit: Unit network.service does not exist
+The unit files have no installation config (WantedBy=, RequiredBy=, UpheldBy=,
+Also=, or Alias= settings in the [Install] section, and DefaultInstance= for
+template units). This means they are not meant to be enabled or disabled using systemctl.
+ 
+Possible reasons for having these kinds of units are:
+* A unit may be statically enabled by being symlinked from another unit's
+  .wants/, .requires/, or .upholds/ directory.
+* A unit's purpose may be to act as a helper for some other unit which has
+  a requirement dependency on it.
+* A unit may be started when needed via activation (socket, path, timer,
+  D-Bus, udev, scripted systemctl call, ...).
+* In case of template units, the unit is meant to be enabled with some
+  instance name specified.

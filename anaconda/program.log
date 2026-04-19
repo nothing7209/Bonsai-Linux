@@ -1,0 +1,6 @@
+09:34:57,681 INF program: Running... losetup --list
+09:34:57,695 INF program: Running... dbus-daemon --print-address --syslog --config-file=/usr/share/anaconda/dbus/anaconda-bus.conf
+09:35:01,108 INF program: Running... udevadm settle --timeout=300
+09:35:01,131 DBG program: Return code: 0
+09:35:01,142 INF program: Running... udevadm settle --timeout=300
+09:35:01,160 DBG program: Return code: 0
