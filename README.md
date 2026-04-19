@@ -33,10 +33,10 @@ Once the Bonsai Linux live desktop has loaded, you can explore the system. To in
 * Launch the **Install to Hard Drive** application.
 * Follow the on-screen instructions for language selection, disk partitioning, and user account creation.
 
----
-
 ### 4. Finalize
 After the installation process is complete, restart your computer and remove the USB drive. Your new Bonsai Linux system is now ready for use.
+
+---
 
 ## Contributing
 As an open-source project, contributions to the Kickstart configurations and build scripts are welcome. Please submit pull requests or report issues via the project repository.
